@@ -1,11 +1,13 @@
-﻿namespace WebApiFlorence
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApiFlorence
 {
     public class Document
     {
-        public int Id { get; set; }
-        public Template? Template { get; set; }
-        public User? User { get; set; }
+        public int DocumentId { get; set; }
+        [Required(ErrorMessage = "Signing Date is required")]
         public DateTime SigningDate { get; set; }
         public byte[]? ContentDocument { get; set; }
+        public int ReservationId { get; set; }
     }
 }

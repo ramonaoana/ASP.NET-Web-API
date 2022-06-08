@@ -40,31 +40,55 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "Microsoft.AspNet.WebApi.Cors": {
               "target": "Package",
-              "version": "[5.2.7, )"
+              "version": "[5.2.8, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[6.0.5, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.28.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.3.0, )"
+              "version": "[6.3.1, )"
+            },
+            "Wkhtmltopdf.NetCore": {
+              "target": "Package",
+              "version": "[3.0.2, )"
             }
           },
           "imports": [

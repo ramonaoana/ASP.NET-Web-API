@@ -15,26 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\aramo\Desktop\ASP.NET WEB API\WebApiFlorence\WebApiFlorence
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/aramo/Desktop/ASP.NET WEB API/WebApiFlorence/WebApiFlorence/Views/Contract.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJhY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/aramo/Desktop/ASP.NET WEB API/WebApiFlorence/WebApiFlorence/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/aramo/Desktop/ASP.NET WEB API/WebApiFlorence/WebApiFlorence/Views/Users/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/aramo/Desktop/ASP.NET WEB API/WebApiFlorence/WebApiFlorence/Views/Users/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/aramo/Desktop/ASP.NET WEB API/WebApiFlorence/WebApiFlorence/Views/Users/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/aramo/Desktop/ASP.NET WEB API/WebApiFlorence/WebApiFlorence/Views/Users/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/aramo/Desktop/ASP.NET WEB API/WebApiFlorence/WebApiFlorence/Views/Users/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,91 @@
+﻿@model WebApiFlorence.User
+
+@{ var firstName = @Model.FirstName;}
+@{ var lastName = @Model.LastName;}
+@{ var address = @Model.Address; }
+@{ var town = @Model.Town; }
+@{ var cnp = @Model.CNP; }
+
+
+<html>
+    <head>
+    <body>
+        <h2><center>CONTRACT DE PRESTARI SERVICII</center></h2>
+        <h2><center>Nr. 1 din data 26.05.2022</center></h2>
+
+        <h1 style="font-size:medium">PARTILE CONTRACTANTE</h1>
+        <p style="font-size:large">1.1. SC FLORENCE SRL, cu sediul social in Domnesti, Soseaua Ioan Cuza, nr. 25, inregistrata la Registrul Comertului Bucuresti, sub Nr J40/7463/2002, cod unic de inregistrare RO 14810201, telefon 0723352535, avand contul de virament 
+            RO21BRDE441AD3456785, deschis la BRD Sucursala Unirii, reprezentata de domnul Stan Adrian Gabriel, in calitate de 
+            Administrator, in calitate de <b>prestator</b>, pe de o parte,
+        </p>
+         <p style="font-size:large">1.2. <b>Domnul/Doamna</b> @firstName , @firstName , @address , @town, @address, posesorul codului numeric personal @cnp, in calitate de
+            <b>beneficiar</b>, pe de alta parte, <br/> au convenit sa incheie prezentul contract de prestări de servicii, cu respectarea următoarelor clauze:</p>
+        <br />
+        <h1 style="font-size:medium">II. OBIECTUL CONTRACTULUI</h1>
+       <p style="font-size:large">
+           2.1. Obiectul contractului îl reprezintă: <br />
+                Furnizarea de servicii de restaurant (servirea mesei) pentru botez, pentru un numar de 200 persoane, în locaţia restaurantului Florence pe data de 18 mai, intre orele 14 si 24. Bauturile consumate dupa orele 24 vor fi achitate suplimentar prezentului contract.<br />
+           2.2. Prestatorul pune la dispozitie beneficiarului cotă parte din restaurantului pentruorganizarea petrecerii de botez pe data de 18 mai. <br />
+           2.3. In urma contractului, beneficiarul a solicitat 200 meniuri de tip Gold in valoare de 10000 lei. <br />
+           2.4. Prestatorul se obligă să prepare meniul şi să pregătească băuturile conform regulilor meseriei si acordului încheiat în prealabil între beneficiar şi prestator.<br />
+       </p>
+       <h1 style="font-size:medium">III. DURATA CONTRACTULUI</h1>
+        <p style="font-size:large">
+            3.1. Contractul se încheie pe o durată de 1 lună, începând de la data de 18 aprilie 2012 şi până la data de 18 mai 2012.
+       </p>
+
+       <h1 style="font-size:medium">IV. PRETUL CONTRACTULUI</h1>
+        <p style="font-size:large">
+            4.1. Preţul prestaţiei se stabileste în felul următor: <br /> Preţul stabilit între prestator şi beneficiar este de 150 lei/persoană invitată, din care 120 lei/persoană
+pentru mancare şi 30 lei/persoană pentru băuturile alcoolice/nealcoolice; Beneficiarul se obligă să aiba minim 40 şi dar poate ajunge la 60 de persoane invitate.
+       </p>
+
+       <h1 style="font-size:medium">IV. MODALITATI DE PLATA</h1>
+       <p style="font-size:large">
+           5.1. Plata se va face pe baza de factura, emisa de prestator. Factura necontestata de beneficiar la data comunicarii, se reuma a fi acceptata in totalitate. <br />
+           5.2. Preţul se va plăti în numerar, eşalonat, astfel: 10% avans  din valoarea totala la momentul incheierii contractului, urmand ca diferenta de bani sa fie platita numerar dupa finalizarea evenimentului.
+       </p>
+
+       <h1 style="font-size:medium">VI. GARANTII</h1>
+       <p style="font-size:large">
+           6.1. Prestatorul de servicii garantează pentru desfasurarea în bune condiţii a petercerii.
+       </p>
+
+       <h1 style="font-size:medium">VII. OBLIGATIILE PARTILOR</h1>
+       <p style="font-size:large">
+          7.1. Prestatorul de servicii se obligă: să pună la dispozitia beneficiarului cota parte din Restaurantul FLORENCE in vederea desfasurarii evenimentului, sa asigure personalul care va concura la desfasurarea in bune conditii a petrecerii.<br />
+          7.2. Beneficiarul se obliga:<br />
+          a) sa plateasca prestatorului in conditiile stipulate in prezentul contract <br />
+          b) sa asigure desfasurarea petrecerii in conditii decente <br />
+          c) in conditiile deteriorarii veselei, beneficiarul se obliga sa plateasca contravaloarea pagubelor pricinuite. <br />
+          d) se obliga ca inainte de inceperea petrecerii, sa numeasca un reprezentant al sau pentru a superviza cantitatile de mancare si bautura oferite de prestator si consumate de invitatii beneficiarului. Acesta va semna, alaturi de beneficiar, un Proces Verbal in acest sens.
+          </p>
+          <br />
+          <br />
+
+        <h1 style="font-size:medium">VIII. CLAUZA PENALA</h1>
+       <p style="font-size:large">
+          8.1. In cazul in care una dintre parti nu isi indeplineste obligatiile contractuale sau si le indeplineste in mod necorespunzator, se obliga sa plateasca celeilalte parti penalitati daune-interese astfel: <br/>
+          -penalitati de 5%/zi de intarziere pana la achitarea platii integrale <br />
+          -penalitatile pot depasi valoarea debitului
+        </p> 
+
+         <h1 style="font-size:medium">VIII. CLAUZE FINALE</h1>
+       <p style="font-size:large">
+          8.1. In cazul in care una dintre parti nu isi indeplineste obligatiile contractuale sau si le indeplineste in mod necorespunzator, se obliga sa plateasca celeilalte parti penalitati daune-interese astfel: <br/>
+          -penalitati de 5%/zi de intarziere pana la achitarea platii integrale <br />
+          -penalitatile pot depasi valoarea debitului
+        </p> 
+
+
+
+        <br />
+        <p>PRESTATOR:                                                 BENEFICIAR:</p>
+        <p> STAN ADRIAN GABRIEL                                       @firstName @lastName</p>
+        <img src="images/sign.png" alt="Sign"/>
+
+        <br /> 
+        
+    </body>
+    </head>
+</html>

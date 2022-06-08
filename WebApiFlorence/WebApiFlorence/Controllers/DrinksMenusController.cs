@@ -48,7 +48,7 @@ namespace WebApiFlorence.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDrinksMenu(int id, DrinksMenu drinksMenu)
         {
-            if (id != drinksMenu.Id)
+            if (id != drinksMenu.DrinksMenuId)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace WebApiFlorence.Controllers
             _context.DrinksMenus.Add(drinksMenu);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetDrinksMenu", new { id = drinksMenu.Id }, drinksMenu);
+            return CreatedAtAction("GetDrinksMenu", new { id = drinksMenu.DrinksMenuId }, drinksMenu);
         }
 
         // DELETE: api/DrinksMenus/5
@@ -103,7 +103,7 @@ namespace WebApiFlorence.Controllers
 
         private bool DrinksMenuExists(int id)
         {
-            return _context.DrinksMenus.Any(e => e.Id == id);
+            return _context.DrinksMenus.Any(e => e.DrinksMenuId == id);
         }
     }
 }

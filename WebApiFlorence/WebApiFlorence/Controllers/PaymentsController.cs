@@ -48,7 +48,7 @@ namespace WebApiFlorence.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPayment(int id, Payment payment)
         {
-            if (id != payment.Id)
+            if (id != payment.PaymentId)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace WebApiFlorence.Controllers
             _context.Payments.Add(payment);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPayment", new { id = payment.Id }, payment);
+            return CreatedAtAction("GetPayment", new { id = payment.PaymentId }, payment);
         }
 
         // DELETE: api/Payments/5
@@ -103,7 +103,7 @@ namespace WebApiFlorence.Controllers
 
         private bool PaymentExists(int id)
         {
-            return _context.Payments.Any(e => e.Id == id);
+            return _context.Payments.Any(e => e.PaymentId == id);
         }
     }
 }

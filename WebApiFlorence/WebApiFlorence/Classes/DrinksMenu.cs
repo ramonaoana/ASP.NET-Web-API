@@ -2,9 +2,10 @@
 {
     public class DrinksMenu
     {
-        public int Id { get; set; }
+        public int DrinksMenuId { get; set; }
         public string DrinksMenuName { get; set; }
-        public string DrinksMenuPrice { get; set; }
+        public double DrinksMenuPrice { get; set; }
         public string DrinksMenuDescription { get; set; }
+        public byte[] DrinksMenuPictureData { get; set; }
     }
 }

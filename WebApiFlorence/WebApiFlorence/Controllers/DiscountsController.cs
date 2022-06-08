@@ -48,7 +48,7 @@ namespace WebApiFlorence.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDiscount(int id, Discount discount)
         {
-            if (id != discount.Id)
+            if (id != discount.DiscountId)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace WebApiFlorence.Controllers
             _context.Discounts.Add(discount);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetDiscount", new { id = discount.Id }, discount);
+            return CreatedAtAction("GetDiscount", new { id = discount.DiscountId }, discount);
         }
 
         // DELETE: api/Discounts/5
@@ -103,7 +103,7 @@ namespace WebApiFlorence.Controllers
 
         private bool DiscountExists(int id)
         {
-            return _context.Discounts.Any(e => e.Id == id);
+            return _context.Discounts.Any(e => e.DiscountId == id);
         }
     }
 }

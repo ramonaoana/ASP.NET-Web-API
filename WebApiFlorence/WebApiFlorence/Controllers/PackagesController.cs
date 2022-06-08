@@ -48,7 +48,7 @@ namespace WebApiFlorence.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPackage(int id, Package package)
         {
-            if (id != package.Id)
+            if (id != package.PackageId)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace WebApiFlorence.Controllers
             _context.Packages.Add(package);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPackage", new { id = package.Id }, package);
+            return CreatedAtAction("GetPackage", new { id = package.PackageId }, package);
         }
 
         // DELETE: api/Packages/5
@@ -103,7 +103,7 @@ namespace WebApiFlorence.Controllers
 
         private bool PackageExists(int id)
         {
-            return _context.Packages.Any(e => e.Id == id);
+            return _context.Packages.Any(e => e.PackageId == id);
         }
     }
 }

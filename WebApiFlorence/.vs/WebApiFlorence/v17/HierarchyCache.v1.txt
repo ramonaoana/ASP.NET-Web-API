@@ -1,0 +1,944 @@
+﻿++Solution 'WebApiFlorence' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:WebApiFlorence.sln
+++WebApiFlorence
+i:{00000000-0000-0000-0000-000000000000}:WebApiFlorence
+++Connected Services 
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>888
+++SQL Server Database
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>949
+++Dependencies
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>887
+++Analyzers
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:analyzers
+++Frameworks
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:frameworks
+++Packages
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:packages
+++Imports
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>371
+++Sdk.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\sdk\sdk.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.illink.tasks\sdk\sdk.props
+++Sdk.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\sdk\sdk.targets
+++Properties
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\properties\
+++launchSettings.json
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\properties\launchsettings.json
+++bin
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\
+++Debug
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\
+++Classes
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\classes\
+++Discount.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\classes\discount.cs
+++Document.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\classes\document.cs
+++DrinksMenu.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\classes\drinksmenu.cs
+++FoodMenu.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\classes\foodmenu.cs
+++Package.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\classes\package.cs
+++Payment.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\classes\payment.cs
+++Request.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\classes\request.cs
+++Reservation.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\classes\reservation.cs
+++SpecialOffer.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\classes\specialoffer.cs
+++Template.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\classes\template.cs
+++User.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\classes\user.cs
+++Controllers
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\
+++DiscountsController.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\discountscontroller.cs
+++DocumentsController.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\documentscontroller.cs
+++DrinksMenusController.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\drinksmenuscontroller.cs
+++FoodMenusController.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\foodmenuscontroller.cs
+++MailController.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\mailcontroller.cs
+++PackagesController.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\packagescontroller.cs
+++PaymentsController.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\paymentscontroller.cs
+++RequestsController.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\requestscontroller.cs
+++ReservationsController.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\reservationscontroller.cs
+++SpecialOffersController.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\specialofferscontroller.cs
+++TemplatesController.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\templatescontroller.cs
+++UsersController.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\controllers\userscontroller.cs
+++Data
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\data\
+++DataContext.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\data\datacontext.cs
+++Migrations
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\migrations\
+++Model
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\model\
+++MailRequest.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\model\mailrequest.cs
+++obj
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\
+++Services
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\services\
+++IMailService.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\services\imailservice.cs
+++MailService.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\services\mailservice.cs
+++Settings
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\settings\
+++MailSettings.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\settings\mailsettings.cs
+++Views
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\views\
+++Shared
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\views\shared\
+++_ValidationScriptsPartial.cshtml
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\views\shared\_validationscriptspartial.cshtml
+++appsettings.json
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\appsettings.json
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\appsettings.json
+++Program.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\program.cs
+++SQL Server Database dependency is detected
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>950
+++MessagePackAnalyzer
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\.nuget\packages\messagepackanalyzer\2.1.152\analyzers\dotnet\messagepackanalyzer.dll
+++Microsoft.AspNetCore.Analyzers
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.SourceGenerator.Tooling.Internal
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
+++Microsoft.CodeAnalysis.Analyzers
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.Analyzers
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.3\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\microsoft.netcore.app
+++Microsoft.AspNet.WebApi.Cors (5.2.7)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>913
+++Microsoft.EntityFrameworkCore (6.0.3)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>910
+++Microsoft.EntityFrameworkCore.SqlServer (6.0.3)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>911
+++Microsoft.EntityFrameworkCore.Tools (6.0.3)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>914
+++Microsoft.VisualStudio.Web.CodeGeneration.Design (6.0.2)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>915
+++MimeKit (3.2.0)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>948
+++NETCore.MailKit (2.0.3)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>918
+++Swashbuckle.AspNetCore (6.3.0)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>912
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk\Sdk)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\sdk\sdk.props
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk\Sdk)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\sdk\sdk.targets
+++net6.0
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-arm\lib\net6.0\
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-arm64\lib\net6.0\
+++20220413115823_First_Create.cs
+++DataContextModelSnapshot.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\migrations\datacontextmodelsnapshot.cs
+++project.assets.json
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\project.assets.json
+++project.nuget.cache
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\project.nuget.cache
+++staticwebassets.pack.sentinel
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\staticwebassets.pack.sentinel
+++WebApiFlorence.csproj.EntityFrameworkCore.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\webapiflorence.csproj.entityframeworkcore.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\webapiflorence.csproj.entityframeworkcore.targets
+++WebApiFlorence.csproj.nuget.dgspec.json
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\webapiflorence.csproj.nuget.dgspec.json
+++WebApiFlorence.csproj.nuget.g.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\webapiflorence.csproj.nuget.g.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\webapiflorence.csproj.nuget.g.props
+++WebApiFlorence.csproj.nuget.g.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\webapiflorence.csproj.nuget.g.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\webapiflorence.csproj.nuget.g.targets
+++appsettings.Development.json
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\appsettings.development.json
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\appsettings.development.json
+++Microsoft.Common.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.props
+++Microsoft.NET.Sdk.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.props
+++Sdk.Razor.CurrentVersion.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.props
+++Microsoft.NET.Sdk.Web.ProjectSystem.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.props
+++Microsoft.NET.Sdk.Publish.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.props
+++Microsoft.NET.Sdk.BeforeCommon.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.beforecommon.targets
+++Microsoft.CSharp.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.csharp.targets
+++Microsoft.NET.Sdk.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.targets
+++Microsoft.NET.Compatibility.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.targets
+++NuGet.Build.Tasks.Pack.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\nuget.build.tasks.pack\build\nuget.build.tasks.pack.targets
+++Sdk.Razor.CurrentVersion.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.targets
+++Microsoft.NET.Sdk.Web.ProjectSystem.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.targets
+++Microsoft.NET.Sdk.Publish.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.targets
+++cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\
+++de
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\
+++es
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\
+++fr
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\
+++it
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\
+++ja
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\
+++ko
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\
+++pl
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\
+++pt-BR
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\
+++ru
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\
+++runtimes
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\
+++tr
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\
+++zh-Hans
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\
+++zh-Hant
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\
+++BouncyCastle.Crypto.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\bouncycastle.crypto.dll
+++dotnet-aspnet-codegenerator-design.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\dotnet-aspnet-codegenerator-design.dll
+++Humanizer.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\humanizer.dll
+++MailKit.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\mailkit.dll
+++MessagePack.Annotations.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\messagepack.annotations.dll
+++MessagePack.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\messagepack.dll
+++Microsoft.AspNetCore.Razor.Language.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.aspnetcore.razor.language.dll
+++Microsoft.Bcl.AsyncInterfaces.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.bcl.asyncinterfaces.dll
+++Microsoft.Build.Locator.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.build.locator.dll
+++Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.analyzerutilities.dll
+++Microsoft.CodeAnalysis.CSharp.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.csharp.dll
+++Microsoft.CodeAnalysis.CSharp.Features.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.csharp.features.dll
+++Microsoft.CodeAnalysis.CSharp.Scripting.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.csharp.scripting.dll
+++Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.csharp.workspaces.dll
+++Microsoft.CodeAnalysis.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.dll
+++Microsoft.CodeAnalysis.Features.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.features.dll
+++Microsoft.CodeAnalysis.Razor.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.razor.dll
+++Microsoft.CodeAnalysis.Scripting.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.scripting.dll
+++Microsoft.CodeAnalysis.VisualBasic.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.visualbasic.dll
+++Microsoft.CodeAnalysis.VisualBasic.Features.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.visualbasic.features.dll
+++Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.visualbasic.workspaces.dll
+++Microsoft.CodeAnalysis.Workspaces.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.workspaces.dll
+++Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.codeanalysis.workspaces.msbuild.dll
+++Microsoft.Data.SqlClient.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.data.sqlclient.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\unix\lib\netcoreapp3.1\microsoft.data.sqlclient.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.1\microsoft.data.sqlclient.dll
+++Microsoft.DiaSymReader.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.diasymreader.dll
+++Microsoft.DotNet.Scaffolding.Shared.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.dotnet.scaffolding.shared.dll
+++Microsoft.EntityFrameworkCore.Abstractions.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.entityframeworkcore.abstractions.dll
+++Microsoft.EntityFrameworkCore.Design.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.entityframeworkcore.design.dll
+++Microsoft.EntityFrameworkCore.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.entityframeworkcore.dll
+++Microsoft.EntityFrameworkCore.Relational.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.entityframeworkcore.relational.dll
+++Microsoft.EntityFrameworkCore.SqlServer.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.entityframeworkcore.sqlserver.dll
+++Microsoft.Extensions.Caching.Memory.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.extensions.caching.memory.dll
+++Microsoft.Identity.Client.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.identity.client.dll
+++Microsoft.IdentityModel.JsonWebTokens.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.identitymodel.jsonwebtokens.dll
+++Microsoft.IdentityModel.Logging.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.identitymodel.logging.dll
+++Microsoft.IdentityModel.Protocols.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.identitymodel.protocols.dll
+++Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.identitymodel.protocols.openidconnect.dll
+++Microsoft.IdentityModel.Tokens.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.identitymodel.tokens.dll
+++Microsoft.OpenApi.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.openapi.dll
+++Microsoft.VisualStudio.Debugger.Contracts.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.visualstudio.debugger.contracts.dll
+++Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.visualstudio.web.codegeneration.core.dll
+++Microsoft.VisualStudio.Web.CodeGeneration.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.visualstudio.web.codegeneration.dll
+++Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.visualstudio.web.codegeneration.entityframeworkcore.dll
+++Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.visualstudio.web.codegeneration.templating.dll
+++Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.visualstudio.web.codegeneration.utils.dll
+++Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.visualstudio.web.codegenerators.mvc.dll
+++Microsoft.Win32.SystemEvents.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\microsoft.win32.systemevents.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.0\microsoft.win32.systemevents.dll
+++MimeKit.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\mimekit.dll
+++NETCore.MailKit.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\netcore.mailkit.dll
+++Newtonsoft.Json.Bson.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\newtonsoft.json.bson.dll
+++Newtonsoft.Json.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\newtonsoft.json.dll
+++NuGet.Common.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\nuget.common.dll
+++NuGet.Configuration.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\nuget.configuration.dll
+++NuGet.DependencyResolver.Core.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\nuget.dependencyresolver.core.dll
+++NuGet.Frameworks.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\nuget.frameworks.dll
+++NuGet.LibraryModel.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\nuget.librarymodel.dll
+++NuGet.Packaging.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\nuget.packaging.dll
+++NuGet.ProjectModel.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\nuget.projectmodel.dll
+++NuGet.Protocol.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\nuget.protocol.dll
+++NuGet.Versioning.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\nuget.versioning.dll
+++Swashbuckle.AspNetCore.Swagger.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\swashbuckle.aspnetcore.swagger.dll
+++Swashbuckle.AspNetCore.SwaggerGen.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\swashbuckle.aspnetcore.swaggergen.dll
+++Swashbuckle.AspNetCore.SwaggerUI.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\swashbuckle.aspnetcore.swaggerui.dll
+++System.Composition.AttributedModel.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.composition.attributedmodel.dll
+++System.Composition.Convention.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.composition.convention.dll
+++System.Composition.Hosting.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.composition.hosting.dll
+++System.Composition.Runtime.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.composition.runtime.dll
+++System.Composition.TypedParts.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.composition.typedparts.dll
+++System.Configuration.ConfigurationManager.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.configuration.configurationmanager.dll
+++System.Drawing.Common.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.drawing.common.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\unix\lib\netcoreapp3.0\system.drawing.common.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.0\system.drawing.common.dll
+++System.IdentityModel.Tokens.Jwt.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.identitymodel.tokens.jwt.dll
+++System.Net.Http.Formatting.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.net.http.formatting.dll
+++System.Runtime.Caching.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.runtime.caching.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win\lib\netstandard2.0\system.runtime.caching.dll
+++System.Security.Cryptography.ProtectedData.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.security.cryptography.protecteddata.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win\lib\netstandard2.0\system.security.cryptography.protecteddata.dll
+++System.Security.Permissions.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.security.permissions.dll
+++System.Web.Cors.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.web.cors.dll
+++System.Web.Http.Cors.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.web.http.cors.dll
+++System.Web.Http.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.web.http.dll
+++System.Windows.Extensions.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\system.windows.extensions.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.0\system.windows.extensions.dll
+++WebApiFlorence.deps.json
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\webapiflorence.deps.json
+++WebApiFlorence.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\webapiflorence.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\ref\webapiflorence.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\refint\webapiflorence.dll
+++WebApiFlorence.exe
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\webapiflorence.exe
+++WebApiFlorence.pdb
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\webapiflorence.pdb
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.pdb
+++WebApiFlorence.runtimeconfig.json
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\webapiflorence.runtimeconfig.json
+++20220413115823_First_Create.Designer.cs
+++Microsoft.NuGet.ImportBefore.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.nuget.importbefore.props
+++NuGet.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\common7\ide\commonextensions\microsoft\nuget\nuget.props
+++Microsoft.NET.Sdk.DefaultItems.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.props
+++Microsoft.NET.Sdk.ImportWorkloads.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.props
+++Microsoft.NET.SupportedTargetFrameworks.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.supportedtargetframeworks.props
+++Microsoft.NET.SupportedPlatforms.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.supportedplatforms.props
+++Microsoft.NET.WindowsSdkSupportedTargetPlatforms.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.windowssdksupportedtargetplatforms.props
+++Microsoft.NET.Sdk.CSharp.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.props
+++Microsoft.NET.ILLink.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.illink.props
+++Microsoft.NET.Compatibility.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.props
+++Microsoft.NET.PackTool.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.props
+++Microsoft.NET.PackProjectTool.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.props
+++Microsoft.NET.Sdk.WindowsDesktop.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.props
+++Microsoft.NET.Windows.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.windows.props
+++Sdk.Razor.StaticAssets.ProjectSystem.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\sdk\sdk.razor.staticassets.projectsystem.props
+++Microsoft.TypeScript.Default.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.default.props
+++Microsoft.NET.Sdk.Web.DefaultItems.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.defaultitems.props
+++Microsoft.NET.DefaultAssemblyInfo.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.defaultassemblyinfo.targets
+++Microsoft.NET.DefaultOutputPaths.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.defaultoutputpaths.targets
+++Microsoft.NET.Sdk.ImportPublishProfile.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importpublishprofile.targets
+++Microsoft.NET.TargetFrameworkInference.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.targetframeworkinference.targets
+++Microsoft.NET.Sdk.Razor.BeforeCommon.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.beforecommon.targets
+++Microsoft.NET.Sdk.ImportWorkloads.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.targets
+++Microsoft.NET.RuntimeIdentifierInference.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.runtimeidentifierinference.targets
+++Microsoft.NET.EolTargetFrameworks.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.eoltargetframeworks.targets
+++Microsoft.NET.NuGetOfflineCache.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.nugetofflinecache.targets
+++Microsoft.Managed.Before.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.managed.before.targets
+++Microsoft.CSharp.CurrentVersion.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.csharp.currentversion.targets
+++Microsoft.Managed.After.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.managed.after.targets
+++Microsoft.NET.Sdk.Common.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.common.targets
+++Microsoft.PackageDependencyResolution.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.packagedependencyresolution.targets
+++Microsoft.NET.Sdk.DefaultItems.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.targets
+++Microsoft.NET.Sdk.FrameworkReferenceResolution.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.frameworkreferenceresolution.targets
+++Microsoft.NET.Sdk.Shared.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.shared.targets
+++Microsoft.NET.DisableStandardFrameworkResolution.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.disablestandardframeworkresolution.targets
+++Microsoft.NET.DesignerSupport.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.designersupport.targets
+++Microsoft.NET.GenerateAssemblyInfo.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.generateassemblyinfo.targets
+++Microsoft.NET.GenerateGlobalUsings.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.generateglobalusings.targets
+++Microsoft.NET.GenerateSupportedRuntime.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.generatesupportedruntime.targets
+++Microsoft.NET.ComposeStore.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.composestore.targets
+++Microsoft.NET.CrossGen.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.crossgen.targets
+++Microsoft.NET.ObsoleteReferences.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.obsoletereferences.targets
+++Microsoft.NET.Publish.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.publish.targets
+++Microsoft.NET.PackTool.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.targets
+++Microsoft.NET.PackProjectTool.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.targets
+++Microsoft.NET.PreserveCompilationContext.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.preservecompilationcontext.targets
+++Microsoft.NET.ConflictResolution.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.conflictresolution.targets
+++Microsoft.NET.Sdk.CSharp.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.targets
+++Microsoft.NET.ILLink.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.illink.targets
+++Microsoft.NET.Sdk.Analyzers.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.analyzers.targets
+++Microsoft.NET.Compatibility.Common.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.common.targets
+++Microsoft.NET.Sdk.Razor.Configuration.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.configuration.targets
+++Microsoft.NET.Sdk.Razor.CodeGeneration.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.codegeneration.targets
+++Microsoft.NET.Sdk.Razor.SourceGenerators.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.sourcegenerators.targets
+++Microsoft.NET.Sdk.Razor.StaticWebAssets.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.staticwebassets.targets
+++Microsoft.NET.Sdk.Razor.ScopedCss.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.scopedcss.targets
+++Microsoft.NET.Sdk.Razor.JSModules.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.jsmodules.targets
+++Microsoft.NET.Sdk.Razor.GenerateAssemblyInfo.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.generateassemblyinfo.targets
+++Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.mvcapplicationpartsdiscovery.targets
+++Microsoft.NET.Sdk.Razor.DesignTime.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\razor\microsoft.net.sdk.razor.designtime.targets
+++Microsoft.TypeScript.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files (x86)\microsoft sdks\typescript\3.9\build\microsoft.typescript.targets
+++Microsoft.TypeScript.DotNetCore.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.dotnetcore.targets
+++Microsoft.Web.Designtime.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\managed.web\microsoft.web.designtime.targets
+++Default.pubxml
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\publishprofiles\default.pubxml
+++Microsoft.NET.Sdk.Publish.ComputeFiles.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\computetargets\microsoft.net.sdk.publish.computefiles.targets
+++Microsoft.NET.Sdk.Publish.FilterFiles.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.filterfiles.targets
+++Microsoft.NET.Sdk.Publish.CopyFiles.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.copyfiles.targets
+++Microsoft.NET.Sdk.Publish.TransformFiles.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\transformtargets\microsoft.net.sdk.publish.transformfiles.targets
+++Microsoft.NET.Sdk.Publish.FileSystem.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\publishtargets\microsoft.net.sdk.publish.filesystem.targets
+++Microsoft.NET.Sdk.DotNetCLITool.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\dotnetclitooltargets\microsoft.net.sdk.dotnetclitool.targets
+++Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\microsoft.codeanalysis.csharp.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\microsoft.codeanalysis.csharp.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\microsoft.codeanalysis.csharp.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\microsoft.codeanalysis.csharp.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\microsoft.codeanalysis.csharp.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\microsoft.codeanalysis.csharp.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\microsoft.codeanalysis.csharp.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\microsoft.codeanalysis.csharp.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\microsoft.codeanalysis.csharp.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\microsoft.codeanalysis.csharp.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\microsoft.codeanalysis.csharp.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\microsoft.codeanalysis.csharp.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\microsoft.codeanalysis.csharp.features.resources.dll
+++Microsoft.CodeAnalysis.CSharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\microsoft.codeanalysis.csharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\microsoft.codeanalysis.csharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\microsoft.codeanalysis.csharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\microsoft.codeanalysis.csharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\microsoft.codeanalysis.csharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\microsoft.codeanalysis.csharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\microsoft.codeanalysis.csharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\microsoft.codeanalysis.csharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\microsoft.codeanalysis.csharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\microsoft.codeanalysis.csharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\microsoft.codeanalysis.csharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\microsoft.codeanalysis.csharp.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\microsoft.codeanalysis.csharp.resources.dll
+++Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\microsoft.codeanalysis.csharp.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\microsoft.codeanalysis.csharp.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\microsoft.codeanalysis.csharp.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\microsoft.codeanalysis.csharp.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\microsoft.codeanalysis.csharp.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\microsoft.codeanalysis.csharp.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\microsoft.codeanalysis.csharp.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\microsoft.codeanalysis.csharp.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\microsoft.codeanalysis.csharp.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\microsoft.codeanalysis.csharp.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\microsoft.codeanalysis.csharp.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\microsoft.codeanalysis.csharp.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\microsoft.codeanalysis.csharp.scripting.resources.dll
+++Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\microsoft.codeanalysis.csharp.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\microsoft.codeanalysis.csharp.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\microsoft.codeanalysis.csharp.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\microsoft.codeanalysis.csharp.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\microsoft.codeanalysis.csharp.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\microsoft.codeanalysis.csharp.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\microsoft.codeanalysis.csharp.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\microsoft.codeanalysis.csharp.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\microsoft.codeanalysis.csharp.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\microsoft.codeanalysis.csharp.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\microsoft.codeanalysis.csharp.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\microsoft.codeanalysis.csharp.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\microsoft.codeanalysis.csharp.workspaces.resources.dll
+++Microsoft.CodeAnalysis.Features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\microsoft.codeanalysis.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\microsoft.codeanalysis.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\microsoft.codeanalysis.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\microsoft.codeanalysis.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\microsoft.codeanalysis.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\microsoft.codeanalysis.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\microsoft.codeanalysis.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\microsoft.codeanalysis.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\microsoft.codeanalysis.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\microsoft.codeanalysis.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\microsoft.codeanalysis.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\microsoft.codeanalysis.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\microsoft.codeanalysis.features.resources.dll
+++Microsoft.CodeAnalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\microsoft.codeanalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\microsoft.codeanalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\microsoft.codeanalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\microsoft.codeanalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\microsoft.codeanalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\microsoft.codeanalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\microsoft.codeanalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\microsoft.codeanalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\microsoft.codeanalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\microsoft.codeanalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\microsoft.codeanalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\microsoft.codeanalysis.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\microsoft.codeanalysis.resources.dll
+++Microsoft.CodeAnalysis.Scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\microsoft.codeanalysis.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\microsoft.codeanalysis.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\microsoft.codeanalysis.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\microsoft.codeanalysis.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\microsoft.codeanalysis.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\microsoft.codeanalysis.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\microsoft.codeanalysis.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\microsoft.codeanalysis.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\microsoft.codeanalysis.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\microsoft.codeanalysis.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\microsoft.codeanalysis.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\microsoft.codeanalysis.scripting.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\microsoft.codeanalysis.scripting.resources.dll
+++Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\microsoft.codeanalysis.visualbasic.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\microsoft.codeanalysis.visualbasic.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\microsoft.codeanalysis.visualbasic.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\microsoft.codeanalysis.visualbasic.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\microsoft.codeanalysis.visualbasic.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\microsoft.codeanalysis.visualbasic.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\microsoft.codeanalysis.visualbasic.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\microsoft.codeanalysis.visualbasic.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\microsoft.codeanalysis.visualbasic.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\microsoft.codeanalysis.visualbasic.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\microsoft.codeanalysis.visualbasic.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\microsoft.codeanalysis.visualbasic.features.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\microsoft.codeanalysis.visualbasic.features.resources.dll
+++Microsoft.CodeAnalysis.VisualBasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\microsoft.codeanalysis.visualbasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\microsoft.codeanalysis.visualbasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\microsoft.codeanalysis.visualbasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\microsoft.codeanalysis.visualbasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\microsoft.codeanalysis.visualbasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\microsoft.codeanalysis.visualbasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\microsoft.codeanalysis.visualbasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\microsoft.codeanalysis.visualbasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\microsoft.codeanalysis.visualbasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\microsoft.codeanalysis.visualbasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\microsoft.codeanalysis.visualbasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\microsoft.codeanalysis.visualbasic.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\microsoft.codeanalysis.visualbasic.resources.dll
+++Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\microsoft.codeanalysis.visualbasic.workspaces.resources.dll
+++Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\microsoft.codeanalysis.workspaces.msbuild.resources.dll
+++Microsoft.CodeAnalysis.Workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\cs\microsoft.codeanalysis.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\de\microsoft.codeanalysis.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\es\microsoft.codeanalysis.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\fr\microsoft.codeanalysis.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\it\microsoft.codeanalysis.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ja\microsoft.codeanalysis.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ko\microsoft.codeanalysis.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pl\microsoft.codeanalysis.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\pt-br\microsoft.codeanalysis.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\ru\microsoft.codeanalysis.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\tr\microsoft.codeanalysis.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hans\microsoft.codeanalysis.workspaces.resources.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\zh-hant\microsoft.codeanalysis.workspaces.resources.dll
+++unix
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\unix\
+++win
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win\
+++win-arm
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-arm\
+++win-arm64
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-arm64\
+++win-x64
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-x64\
+++win-x86
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-x86\
+++ref
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\ref\
+++refint
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\refint\
+++staticwebassets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\staticwebassets\
+++.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\.netcoreapp,version=v6.0.assemblyattributes.cs
+++apphost.exe
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\apphost.exe
+++project.razor.json
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\project.razor.json
+++staticwebassets.build.json
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\staticwebassets.build.json
+++WebApiFlorence.AssemblyInfo.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.assemblyinfo.cs
+++WebApiFlorence.AssemblyInfoInputs.cache
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.assemblyinfoinputs.cache
+++WebApiFlorence.assets.cache
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.assets.cache
+++WebApiFlorence.csproj.AssemblyReference.cache
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.csproj.assemblyreference.cache
+++WebApiFlorence.csproj.BuildWithSkipAnalyzers
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.csproj.buildwithskipanalyzers
+++WebApiFlorence.csproj.CopyComplete
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.csproj.copycomplete
+++WebApiFlorence.csproj.CoreCompileInputs.cache
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.csproj.corecompileinputs.cache
+++WebApiFlorence.csproj.FileListAbsolute.txt
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.csproj.filelistabsolute.txt
+++WebApiFlorence.GeneratedMSBuildEditorConfig.editorconfig
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.generatedmsbuildeditorconfig.editorconfig
+++WebApiFlorence.genruntimeconfig.cache
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.genruntimeconfig.cache
+++WebApiFlorence.GlobalUsings.g.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.globalusings.g.cs
+++WebApiFlorence.MvcApplicationPartsAssemblyInfo.cache
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.mvcapplicationpartsassemblyinfo.cache
+++WebApiFlorence.MvcApplicationPartsAssemblyInfo.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.mvcapplicationpartsassemblyinfo.cs
+++WebApiFlorence.RazorAssemblyInfo.cache
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.razorassemblyinfo.cache
+++WebApiFlorence.RazorAssemblyInfo.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\obj\debug\net6.0\webapiflorence.razorassemblyinfo.cs
+++Microsoft.Extensions.ApiDescription.Server.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\.nuget\packages\microsoft.extensions.apidescription.server\3.0.0\build\microsoft.extensions.apidescription.server.props
+++Swashbuckle.AspNetCore.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\.nuget\packages\swashbuckle.aspnetcore\6.3.0\build\swashbuckle.aspnetcore.props
+++Microsoft.EntityFrameworkCore.Design.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\.nuget\packages\microsoft.entityframeworkcore.design\6.0.3\build\net6.0\microsoft.entityframeworkcore.design.props
+++Microsoft.NuGet.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\nuget\17.0\microsoft.nuget.props
+++Microsoft.NETCoreSdk.BundledVersions.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\microsoft.netcoresdk.bundledversions.props
+++AutoImport.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\packs\microsoft.net.runtime.webassembly.sdk\6.0.3\sdk\autoimport.props
+++Microsoft.NET.Sdk.WindowsDesktop.WindowsForms.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.windowsforms.props
+++Microsoft.NET.Sdk.WindowsDesktop.WPF.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.wpf.props
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain\workloadmanifest.targets
+++Microsoft.CSharp.Core.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\roslyn\microsoft.csharp.core.targets
+++Microsoft.CSharp.DesignTime.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\managed\microsoft.csharp.designtime.targets
+++Microsoft.Common.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.common.targets
+++Microsoft.ServiceModel.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.servicemodel.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.servicemodel.targets
+++Microsoft.NET.Sdk.DefaultItems.Shared.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.shared.targets
+++Microsoft.NETCoreSdk.BundledCliTools.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\microsoft.netcoresdk.bundledclitools.props
+++Microsoft.NET.DefaultPackageConflictOverrides.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.defaultpackageconflictoverrides.targets
+++Microsoft.CodeAnalysis.NetAnalyzers.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.props
+++Microsoft.CodeAnalysis.NetAnalyzers.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.targets
+++03.09.06.00.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files (x86)\microsoft sdks\typescript\versions\03.09.06.00.props
+++lib
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\unix\lib\
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win\lib\
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-arm\lib\
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-arm64\lib\
+++native
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-arm\native\
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-arm64\native\
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-x64\native\
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-x86\native\
+++Microsoft.NET.ILLink.Tasks.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.illink.tasks\build\microsoft.net.illink.tasks.props
+++System.Windows.Forms.Analyzers.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.windowsdesktop\targets\system.windows.forms.analyzers.props
+++Microsoft.Managed.Core.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\roslyn\microsoft.managed.core.targets
+++Microsoft.Managed.DesignTime.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\managed\microsoft.managed.designtime.targets
+++Microsoft.Common.CurrentVersion.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.common.currentversion.targets
+++netcoreapp3.0
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\unix\lib\netcoreapp3.0\
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.0\
+++netcoreapp3.1
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\unix\lib\netcoreapp3.1\
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.1\
+++netstandard2.0
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win\lib\netstandard2.0\
+++Microsoft.Data.SqlClient.SNI.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-arm\native\microsoft.data.sqlclient.sni.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-arm64\native\microsoft.data.sqlclient.sni.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-x64\native\microsoft.data.sqlclient.sni.dll
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-x86\native\microsoft.data.sqlclient.sni.dll
+++Microsoft.Managed.Core.CurrentVersions.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\roslyn\microsoft.managed.core.currentversions.targets
+++WebApiFlorence.csproj.user
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\webapiflorence.csproj.user
+++Microsoft.NET.props
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.net.props
+++Microsoft.CodeAnalysis.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\codeanalysis\microsoft.codeanalysis.targets
+++Microsoft.Xaml.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.xaml.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.xaml.targets
+++Microsoft.WorkflowBuildExtensions.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.workflowbuildextensions.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.workflowbuildextensions.targets
+++Microsoft.TeamTest.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\teamtest\microsoft.teamtest.targets
+++NuGet.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\common7\ide\commonextensions\microsoft\nuget\nuget.targets
+++Microsoft.Docker.ImportAfter.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.targets\importafter\microsoft.docker.importafter.targets
+++Microsoft.NET.Build.Extensions.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.targets\importafter\microsoft.net.build.extensions.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\microsoft.net.build.extensions\microsoft.net.build.extensions.targets
+++Microsoft.NuGet.ImportAfter.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.targets\importafter\microsoft.nuget.importafter.targets
+++Microsoft.Web.ImportAfter.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.targets\importafter\microsoft.web.importafter.targets
+++Microsoft.Extensions.ApiDescription.Server.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\.nuget\packages\microsoft.extensions.apidescription.server\3.0.0\build\microsoft.extensions.apidescription.server.targets
+++dotnet-aspnet-codegenerator-design.exe
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\bin\debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+++Microsoft.Docker.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\sdks\microsoft.docker.sdk\build\microsoft.docker.targets
+++Microsoft.Web.IISSupport.targets
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\managed.web\microsoft.web.iissupport.targets
+++MailKit (3.2.0)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>951
+++Microsoft.AspNetCore.All (2.0.0)
+++Microsoft.AspNetCore.Identity (2.2.0)
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:>953
+++1Controller.cs
+++ApiController.cs
+++20220416103853_FirstCreate.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\migrations\20220416103853_firstcreate.cs
+++20220416103853_FirstCreate.Designer.cs
+i:{0a5bf2ad-f5a1-4814-a4db-810a6ffd78fe}:c:\users\aramo\desktop\asp.net web api\webapiflorence\webapiflorence\migrations\20220416103853_firstcreate.designer.cs

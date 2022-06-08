@@ -43,12 +43,40 @@ namespace WebApiFlorence.Controllers
             return user;
         }
 
+        // GET: api/Users/byEmailAndPass?email=email, password=password
+        [HttpGet("byEmailAndPass")]
+        public async Task<ActionResult<User>> GetUserByPasswordAndEmail([FromQuery] string email, [FromQuery] string password)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Email == email && x.Password == password); 
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return user;
+        }
+
+        // GET: api/Users/byEmail?email=email
+        [HttpGet("byEmail")]
+        public async Task<ActionResult<User>> GetUserByEmail([FromQuery] string email)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Email == email);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return user;
+        }
+
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
-            if (id != user.Id)
+            if (id != user.UserId)
             {
                 return BadRequest();
             }
@@ -82,7 +110,7 @@ namespace WebApiFlorence.Controllers
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            return CreatedAtAction("GetUser", new { id = user.UserId }, user);
         }
 
         // DELETE: api/Users/5
@@ -103,7 +131,7 @@ namespace WebApiFlorence.Controllers
 
         private bool UserExists(int id)
         {
-            return _context.Users.Any(e => e.Id == id);
+            return _context.Users.Any(e => e.UserId == id);
         }
     }
 }

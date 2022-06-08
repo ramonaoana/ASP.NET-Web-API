@@ -3,9 +3,7 @@ namespace WebApiFlorence
 {
     public class Request
     {
-        public int Id { get; set; }
-
-        public User? User { get; set; }
+        public int RequestId { get; set; }
 
         [StringLength(20)]
         public string TypeRequest { get; set; }
@@ -16,5 +14,7 @@ namespace WebApiFlorence
         public bool StatusRequest { get; set; }
 
         public DateTime DateRequest { get; set; }   
+
+        public int UserId { get; set; }
     }
 }

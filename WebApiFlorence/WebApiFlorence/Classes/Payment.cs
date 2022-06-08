@@ -2,10 +2,13 @@
 {
     public class Payment
     {
-        public int Id { get; set; }
-        public User? User { get; set; }
+        public int PaymentId { get; set; }
         public double AmountPayment { get; set; }
+        public String CardNumber { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public String CVC2 { get; set; }
         public DateTime PaymentDate { get; set; }
+        public int UserId { get; set; }
 
     }
 }

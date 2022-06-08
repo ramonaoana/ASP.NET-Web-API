@@ -48,7 +48,7 @@ namespace WebApiFlorence.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSpecialOffer(int id, SpecialOffer specialOffer)
         {
-            if (id != specialOffer.Id)
+            if (id != specialOffer.SpecialOfferId)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace WebApiFlorence.Controllers
             _context.SpecialOffers.Add(specialOffer);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetSpecialOffer", new { id = specialOffer.Id }, specialOffer);
+            return CreatedAtAction("GetSpecialOffer", new { id = specialOffer.SpecialOfferId }, specialOffer);
         }
 
         // DELETE: api/SpecialOffers/5
@@ -103,7 +103,7 @@ namespace WebApiFlorence.Controllers
 
         private bool SpecialOfferExists(int id)
         {
-            return _context.SpecialOffers.Any(e => e.Id == id);
+            return _context.SpecialOffers.Any(e => e.SpecialOfferId == id);
         }
     }
 }

@@ -43,12 +43,13 @@ namespace WebApiFlorence.Controllers
             return reservation;
         }
 
+
         // PUT: api/Reservations/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutReservation(int id, Reservation reservation)
         {
-            if (id != reservation.Id)
+            if (id != reservation.ReservationId)
             {
                 return BadRequest();
             }
@@ -82,7 +83,7 @@ namespace WebApiFlorence.Controllers
             _context.Reservations.Add(reservation);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetReservation", new { id = reservation.Id }, reservation);
+            return CreatedAtAction("GetReservation", new { id = reservation.ReservationId }, reservation);
         }
 
         // DELETE: api/Reservations/5
@@ -103,7 +104,7 @@ namespace WebApiFlorence.Controllers
 
         private bool ReservationExists(int id)
         {
-            return _context.Reservations.Any(e => e.Id == id);
+            return _context.Reservations.Any(e => e.ReservationId == id);
         }
     }
 }
