@@ -53,6 +53,18 @@ namespace WebApiFlorence.Controllers
             return Ok(result);
         }
 
+        [HttpGet("getFoodMenusNames/{type}")]
+        public IActionResult GetFoodMenusNames(int type)
+        {
+            var result = (from foodmenu in _context.FoodMenus
+                          where foodmenu.FoodMenuTypeEvent == type
+                          select new
+                          {
+                              foodMenuName = foodmenu.FoodMenuName
+                          }).ToList();
+            return Ok(result);
+        }
+
 
         [HttpGet("getMenusByType/{id}")]
         public IActionResult GetFullFoodMenu( int id)

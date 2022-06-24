@@ -77,7 +77,7 @@ namespace WebApiFlorence.Controllers
             return NoContent();
         }
 
-        // POST: api/Documents
+        // POST: api/Documents/generateContract/
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Document>> PostDocument()
@@ -86,7 +86,7 @@ namespace WebApiFlorence.Controllers
 
             Document document=new Document();
             document.SigningDate = new DateTime(2020,2,2,12,12,12);
-            document.ReservationId= 1;
+            document.ReservationId= 2;
 
             var user = new User
             {

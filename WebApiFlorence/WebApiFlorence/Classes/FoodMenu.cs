@@ -13,6 +13,6 @@
         public int FirstDishId { get; set; }
         public int SecondDishId { get; set; }
         public int ThirdDishId { get; set; }
-        public int FourthDishId { get; set; }
+        public int? FourthDishId { get; set; }
     }
 }

@@ -43,6 +43,25 @@ namespace WebApiFlorence.Controllers
             return review;
         }
 
+        [HttpGet("getReviews")]
+        public IActionResult GetReviews()
+        {
+            var result = (from review in _context.Review
+                          join user in _context.Users on review.UserId equals user.UserId
+                          select new
+                          {
+                             reviewId=review.ReviewId,
+                             note = review.Note,
+                             feedback=review.Feedback,
+                             reviewDate=review.ReviewDate,
+                             userId=review.UserId,
+                             userFirstName=user.FirstName,
+                             userLasttName=user.LastName
+                          }).ToList();
+            return Ok(result);
+        }
+
+
         // PUT: api/Reviews/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

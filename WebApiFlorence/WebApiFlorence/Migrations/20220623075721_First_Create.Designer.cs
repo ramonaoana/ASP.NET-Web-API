@@ -12,8 +12,8 @@ using WebApiFlorence.Data;
 namespace WebApiFlorence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220601122654_FirstCreate")]
-    partial class FirstCreate
+    [Migration("20220623075721_First_Create")]
+    partial class First_Create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -120,7 +120,7 @@ namespace WebApiFlorence.Migrations
                     b.Property<int>("FoodMenuTypeEvent")
                         .HasColumnType("int");
 
-                    b.Property<int>("FourthDishId")
+                    b.Property<int?>("FourthDishId")
                         .HasColumnType("int");
 
                     b.Property<int>("SecondDishId")
@@ -191,6 +191,39 @@ namespace WebApiFlorence.Migrations
                     b.ToTable("MailRequest");
                 });
 
+            modelBuilder.Entity("WebApiFlorence.Classes.Partner", b =>
+                {
+                    b.Property<int>("PartnerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PartnerId"), 1L, 1);
+
+                    b.Property<string>("PartnerAddresse")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PartnerEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PartnerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PartnerPhone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("PartnerPhoto")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.HasKey("PartnerId");
+
+                    b.ToTable("Partners");
+                });
+
             modelBuilder.Entity("WebApiFlorence.Classes.Payment", b =>
                 {
                     b.Property<int>("PaymentId")
@@ -210,8 +243,9 @@ namespace WebApiFlorence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("ExpirationDate")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("ExpirationDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PaymentDate")
                         .HasColumnType("datetime2");
@@ -224,6 +258,67 @@ namespace WebApiFlorence.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Payments");
+                });
+
+            modelBuilder.Entity("WebApiFlorence.Classes.Photo", b =>
+                {
+                    b.Property<int>("PhotoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PhotoId"), 1L, 1);
+
+                    b.Property<byte[]>("PhotoPictureData")
+                        .HasColumnType("varbinary(max)");
+
+                    b.HasKey("PhotoId");
+
+                    b.ToTable("Photos");
+                });
+
+            modelBuilder.Entity("WebApiFlorence.Classes.Restaurant", b =>
+                {
+                    b.Property<int>("RestaurantId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RestaurantId"), 1L, 1);
+
+                    b.Property<string>("RestaurantAddresse")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestaurantCounty")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestaurantEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestaurantFacebook")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestaurantInstagram")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestaurantNumberPhone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestaurantOwnerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestaurantTown")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("RestaurantId");
+
+                    b.ToTable("Restaurants");
                 });
 
             modelBuilder.Entity("WebApiFlorence.Classes.Review", b =>
@@ -239,6 +334,9 @@ namespace WebApiFlorence.Migrations
 
                     b.Property<int>("Note")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("ReviewDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -297,6 +395,9 @@ namespace WebApiFlorence.Migrations
 
                     b.Property<double>("PriceOffer")
                         .HasColumnType("float");
+
+                    b.Property<int>("SpecialOfferTypeEvent")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("StartDateOffer")
                         .HasColumnType("datetime2");
@@ -454,6 +555,9 @@ namespace WebApiFlorence.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
+                    b.Property<bool?>("hasInvitation")
+                        .HasColumnType("bit");
+
                     b.HasKey("ReservationId");
 
                     b.HasIndex("DiscountId");
@@ -548,7 +652,6 @@ namespace WebApiFlorence.Migrations
                         .WithMany()
                         .HasForeignKey("FourthDishId")
                         .OnDelete(DeleteBehavior.ClientNoAction)
-                        .IsRequired()
                         .HasConstraintName("FK_FoodMenu_FourthDish");
 
                     b.HasOne("WebApiFlorence.Classes.SecondDish", null)

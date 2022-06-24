@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebApiFlorence.Migrations
 {
-    public partial class FirstCreate : Migration
+    public partial class First_Create : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -100,6 +100,56 @@ namespace WebApiFlorence.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Partners",
+                columns: table => new
+                {
+                    PartnerId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PartnerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PartnerPhoto = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    PartnerPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PartnerEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PartnerAddresse = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Partners", x => x.PartnerId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Photos",
+                columns: table => new
+                {
+                    PhotoId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PhotoPictureData = table.Column<byte[]>(type: "varbinary(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Photos", x => x.PhotoId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Restaurants",
+                columns: table => new
+                {
+                    RestaurantId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RestaurantOwnerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RestaurantNumberPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RestaurantAddresse = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RestaurantTown = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RestaurantCounty = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RestaurantEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RestaurantInstagram = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RestaurantFacebook = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Restaurants", x => x.RestaurantId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "SecondDish",
                 columns: table => new
                 {
@@ -166,7 +216,7 @@ namespace WebApiFlorence.Migrations
                     FirstDishId = table.Column<int>(type: "int", nullable: false),
                     SecondDishId = table.Column<int>(type: "int", nullable: false),
                     ThirdDishId = table.Column<int>(type: "int", nullable: false),
-                    FourthDishId = table.Column<int>(type: "int", nullable: false)
+                    FourthDishId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -201,7 +251,7 @@ namespace WebApiFlorence.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     AmountPayment = table.Column<double>(type: "float", nullable: false),
                     CardNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ExpirationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ExpirationDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CVC2 = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PaymentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false)
@@ -246,7 +296,8 @@ namespace WebApiFlorence.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Note = table.Column<int>(type: "int", nullable: false),
                     Feedback = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    ReviewDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -264,6 +315,7 @@ namespace WebApiFlorence.Migrations
                 {
                     SpecialOfferId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    SpecialOfferTypeEvent = table.Column<int>(type: "int", nullable: false),
                     PriceOffer = table.Column<double>(type: "float", nullable: false),
                     DescriptionOffer = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StartDateOffer = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -297,6 +349,7 @@ namespace WebApiFlorence.Migrations
                     StatusReservation = table.Column<int>(type: "int", nullable: false),
                     NotesFoodMenu = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NotesDrinksMenu = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    hasInvitation = table.Column<bool>(type: "bit", nullable: true),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     PaymentId = table.Column<int>(type: "int", nullable: true),
                     FoodMenuId = table.Column<int>(type: "int", nullable: true),
@@ -441,7 +494,16 @@ namespace WebApiFlorence.Migrations
                 name: "Packages");
 
             migrationBuilder.DropTable(
+                name: "Partners");
+
+            migrationBuilder.DropTable(
+                name: "Photos");
+
+            migrationBuilder.DropTable(
                 name: "Requests");
+
+            migrationBuilder.DropTable(
+                name: "Restaurants");
 
             migrationBuilder.DropTable(
                 name: "Review");

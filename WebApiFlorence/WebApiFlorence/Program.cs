@@ -26,6 +26,11 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 });
 
+builder.Services.AddMvc(options =>
+{
+    options.SuppressAsyncSuffixInActionNames = false;
+});
+
 builder.Services.AddScoped<IMailService, MailService>();
 
 // Enable CORS

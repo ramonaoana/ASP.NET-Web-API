@@ -12,6 +12,7 @@ namespace WebApiFlorence
         public int StatusReservation { get; set; }
         public string? NotesFoodMenu{ get; set; }
         public string? NotesDrinksMenu { get; set; }
+        public bool ? hasInvitation { get; set; }
         public int UserId { get; set; }
         public int? PaymentId { get; set; }
         public int? FoodMenuId { get; set; }

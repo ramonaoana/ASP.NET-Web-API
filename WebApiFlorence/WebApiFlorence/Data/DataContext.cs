@@ -13,6 +13,9 @@ namespace WebApiFlorence.Data
         public DbSet<FoodMenu> FoodMenus { get; set; }
         public DbSet<DrinksMenu> DrinksMenus { get; set; }
         public DbSet<Discount> Discounts { get; set; }
+        public DbSet<Photo> Photos { get; set; }
+        public DbSet<Partner> Partners { get; set; }
+        public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Package> Packages { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<SpecialOffer> SpecialOffers { get; set; }
