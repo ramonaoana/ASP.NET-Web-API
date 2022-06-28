@@ -37,104 +37,104 @@ namespace WebApiFlorence.Controllers
             return foodMenu;
         }
 
-        [HttpGet("getFirstDishFromMenu")]
-        public IActionResult GetFirstDishFromFoodMenu([FromQuery] int id)
-        {
-            var result = (from foodmenu in _context.FoodMenus
-                          join firstDish in _context.FirstDish
-                          on foodmenu.FirstDishId equals firstDish.FirstDishId
-                          where foodmenu.FoodMenuId == id
-                          select new
-                          {
-                              firstDishName = firstDish.FirstDishName,
-                              firstDishDescription = firstDish.FirstDishDescription,
-                              firstDishPictureData = firstDish.FirstDishPictureData
-                          }).FirstOrDefault();
-            return Ok(result);
-        }
+        //[HttpGet("getFirstDishFromMenu")]
+        //public IActionResult GetFirstDishFromFoodMenu([FromQuery] int id)
+        //{
+        //    var result = (from foodmenu in _context.FoodMenus
+        //                  join firstDish in _context.FirstDish
+        //                  on foodmenu.FirstDishId equals firstDish.FirstDishId
+        //                  where foodmenu.FoodMenuId == id
+        //                  select new
+        //                  {
+        //                      firstDishName = firstDish.FirstDishName,
+        //                      firstDishDescription = firstDish.FirstDishDescription,
+        //                      firstDishPictureData = firstDish.FirstDishPictureData
+        //                  }).FirstOrDefault();
+        //    return Ok(result);
+        //}
 
-        [HttpGet("getFoodMenusNames/{type}")]
-        public IActionResult GetFoodMenusNames(int type)
-        {
-            var result = (from foodmenu in _context.FoodMenus
-                          where foodmenu.FoodMenuTypeEvent == type
-                          select new
-                          {
-                              foodMenuName = foodmenu.FoodMenuName
-                          }).ToList();
-            return Ok(result);
-        }
+        //[HttpGet("getFoodMenusNames/{type}")]
+        //public IActionResult GetFoodMenusNames(int type)
+        //{
+        //    var result = (from foodmenu in _context.FoodMenus
+        //                  where foodmenu.FoodMenuTypeEvent == type
+        //                  select new
+        //                  {
+        //                      foodMenuName = foodmenu.FoodMenuName
+        //                  }).ToList();
+        //    return Ok(result);
+        //}
 
 
-        [HttpGet("getMenusByType/{id}")]
-        public IActionResult GetFullFoodMenu( int id)
-        {
-            var result = (from foodmenu in _context.FoodMenus
-                          join firstDish in _context.FirstDish on foodmenu.FirstDishId equals firstDish.FirstDishId
-                          join secondDish in _context.SecondDish on foodmenu.SecondDishId equals secondDish.SecondDishId
-                          join thirdDish in _context.ThirdDish on foodmenu.ThirdDishId equals thirdDish.ThirdDishId
-                          join fourthDish in _context.FourthDish on foodmenu.FourthDishId equals fourthDish.FourthDishId
-                          where foodmenu.FoodMenuTypeEvent == id
-                          select new
-                          {
-                              foodMenuName = foodmenu.FoodMenuName,
-                              foodMenuPrice = foodmenu.FoodMenuPrice,
-                              foodMenuDescription = foodmenu.FoodMenuDescription,
+        //[HttpGet("getMenusByType/{id}")]
+        //public IActionResult GetFullFoodMenu(int id)
+        //{
+        //    var result = (from foodmenu in _context.FoodMenus
+        //                  join firstDish in _context.FirstDish on foodmenu.FirstDishId equals firstDish.FirstDishId
+        //                  join secondDish in _context.SecondDish on foodmenu.SecondDishId equals secondDish.SecondDishId
+        //                  join thirdDish in _context.ThirdDish on foodmenu.ThirdDishId equals thirdDish.ThirdDishId
+        //                  join fourthDish in _context.FourthDish on foodmenu.FourthDishId equals fourthDish.FourthDishId
+        //                  where foodmenu.FoodMenuTypeEvent == id
+        //                  select new
+        //                  {
+        //                      foodMenuName = foodmenu.FoodMenuName,
+        //                      foodMenuPrice = foodmenu.FoodMenuPrice,
+        //                      foodMenuDescription = foodmenu.FoodMenuDescription,
 
-                              firstDishName = firstDish.FirstDishName,
-                              firstDishDescription = firstDish.FirstDishDescription,
-                              firstDishPictureData = firstDish.FirstDishPictureData,
+        //                      firstDishName = firstDish.FirstDishName,
+        //                      firstDishDescription = firstDish.FirstDishDescription,
+        //                      firstDishPictureData = firstDish.FirstDishPictureData,
 
-                              secondDishName=secondDish.SecondDishName,
-                              secondDishDescription = secondDish.SecondDishDescription,
-                              secondDishPictureData = secondDish.SecondDishPictureData, 
+        //                      secondDishName = secondDish.SecondDishName,
+        //                      secondDishDescription = secondDish.SecondDishDescription,
+        //                      secondDishPictureData = secondDish.SecondDishPictureData,
 
-                              thirdDishName=thirdDish.ThirdDishName,
-                              thirdDishDescription=thirdDish.ThirdDishDescription,  
-                              thirdDishPictureData = thirdDish.ThirdDishPictureData,
+        //                      thirdDishName = thirdDish.ThirdDishName,
+        //                      thirdDishDescription = thirdDish.ThirdDishDescription,
+        //                      thirdDishPictureData = thirdDish.ThirdDishPictureData,
 
-                              fourthDishName=fourthDish.FourthDishName,
-                              fourthDishDescription = fourthDish.FourthDishDescription,
-                              fourthDishPictureData = fourthDish.FourthDishPictureData
+        //                      fourthDishName = fourthDish.FourthDishName,
+        //                      fourthDishDescription = fourthDish.FourthDishDescription,
+        //                      fourthDishPictureData = fourthDish.FourthDishPictureData
 
-                          }).ToList();
-            return Ok(result);
-        }
+        //                  }).ToList();
+        //    return Ok(result);
+        //}
 
-        [HttpGet("getMenuByName/{name}")]
-        public IActionResult GetFoodMenuByName(String name)
-        {
-            var result = (from foodmenu in _context.FoodMenus
-                          join firstDish in _context.FirstDish on foodmenu.FirstDishId equals firstDish.FirstDishId
-                          join secondDish in _context.SecondDish on foodmenu.SecondDishId equals secondDish.SecondDishId
-                          join thirdDish in _context.ThirdDish on foodmenu.ThirdDishId equals thirdDish.ThirdDishId
-                          join fourthDish in _context.FourthDish on foodmenu.FourthDishId equals fourthDish.FourthDishId
-                          where foodmenu.FoodMenuName == name
-                          select new
-                          {
-                              foodMenuName = foodmenu.FoodMenuName,
-                              foodMenuPrice = foodmenu.FoodMenuPrice,
-                              foodMenuDescription = foodmenu.FoodMenuDescription,
+        //[HttpGet("getMenuByName/{name}")]
+        //public IActionResult GetFoodMenuByName(String name)
+        //{
+        //    var result = (from foodmenu in _context.FoodMenus
+        //                  join firstDish in _context.FirstDish on foodmenu.FirstDishId equals firstDish.FirstDishId
+        //                  join secondDish in _context.SecondDish on foodmenu.SecondDishId equals secondDish.SecondDishId
+        //                  join thirdDish in _context.ThirdDish on foodmenu.ThirdDishId equals thirdDish.ThirdDishId
+        //                  join fourthDish in _context.FourthDish on foodmenu.FourthDishId equals fourthDish.FourthDishId
+        //                  where foodmenu.FoodMenuName == name
+        //                  select new
+        //                  {
+        //                      foodMenuName = foodmenu.FoodMenuName,
+        //                      foodMenuPrice = foodmenu.FoodMenuPrice,
+        //                      foodMenuDescription = foodmenu.FoodMenuDescription,
 
-                              firstDishName = firstDish.FirstDishName,
-                              firstDishDescription = firstDish.FirstDishDescription,
-                              firstDishPictureData = firstDish.FirstDishPictureData,
+        //                      firstDishName = firstDish.FirstDishName,
+        //                      firstDishDescription = firstDish.FirstDishDescription,
+        //                      firstDishPictureData = firstDish.FirstDishPictureData,
 
-                              secondDishName = secondDish.SecondDishName,
-                              secondDishDescription = secondDish.SecondDishDescription,
-                              secondDishPictureData = secondDish.SecondDishPictureData,
+        //                      secondDishName = secondDish.SecondDishName,
+        //                      secondDishDescription = secondDish.SecondDishDescription,
+        //                      secondDishPictureData = secondDish.SecondDishPictureData,
 
-                              thirdDishName = thirdDish.ThirdDishName,
-                              thirdDishDescription = thirdDish.ThirdDishDescription,
-                              thirdDishPictureData = thirdDish.ThirdDishPictureData,
+        //                      thirdDishName = thirdDish.ThirdDishName,
+        //                      thirdDishDescription = thirdDish.ThirdDishDescription,
+        //                      thirdDishPictureData = thirdDish.ThirdDishPictureData,
 
-                              fourthDishName = fourthDish.FourthDishName,
-                              fourthDishDescription = fourthDish.FourthDishDescription,
-                              fourthDishPictureData = fourthDish.FourthDishPictureData
+        //                      fourthDishName = fourthDish.FourthDishName,
+        //                      fourthDishDescription = fourthDish.FourthDishDescription,
+        //                      fourthDishPictureData = fourthDish.FourthDishPictureData
 
-                          }).FirstOrDefault();
-            return Ok(result);
-        }
+        //                  }).FirstOrDefault();
+        //    return Ok(result);
+        //}
 
 
 
@@ -143,12 +143,6 @@ namespace WebApiFlorence.Controllers
         public async Task<ActionResult<IEnumerable<FoodMenu>>> GetFoodMenus()
         {
             return await _context.FoodMenus.ToListAsync();
-        }
-
-        [HttpGet("byEventType/{type}")]
-        public async Task<ActionResult<IEnumerable<FoodMenu>>> GetFoodMenuByEventType(int type)
-        {
-            return await _context.FoodMenus.Where(f=>f.FoodMenuTypeEvent==type).ToListAsync();
         }
 
         // PUT: api/FoodMenus/5
@@ -191,6 +185,19 @@ namespace WebApiFlorence.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetFoodMenu", new { id = foodMenu.FoodMenuId }, foodMenu);
+        }
+
+        [HttpPost("postFoodMenus")]
+        public async Task<ActionResult<FoodMenu>>  PostFoodMenus(List<FoodMenu> foodMenus)
+        {
+            foreach (var item in foodMenus)
+            {
+                _context.FoodMenus.Add(item);
+                _context.SaveChanges();
+
+                await _context.SaveChangesAsync();
+            }
+            return Ok();
         }
 
         // DELETE: api/FoodMenus/5

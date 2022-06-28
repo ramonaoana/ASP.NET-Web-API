@@ -85,6 +85,20 @@ namespace WebApiFlorence.Controllers
             return CreatedAtAction("GetDrinksMenu", new { id = drinksMenu.DrinksMenuId }, drinksMenu);
         }
 
+        [HttpPost("postDrinksMenus")]
+        public async Task<ActionResult<DrinksMenu>> PostDishes(List<DrinksMenu> drinksmenus)
+        {
+
+            foreach (var item in drinksmenus)
+            {
+                _context.DrinksMenus.Add(item);
+            }
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+
         // DELETE: api/DrinksMenus/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDrinksMenu(int id)

@@ -28,6 +28,21 @@ namespace WebApiFlorence.Controllers
             return await _context.Photos.ToListAsync();
         }
 
+        [HttpGet("getRestaurantPhotos/{id}")]
+        public async Task<ActionResult<Photo>> GetRestaurantPhoto(int id)
+        {
+            var result = (from photo in _context.Photos
+                          join member in _context.Members
+                          on photo.MemberId equals member.MemberId
+                          where member.MemberType == id
+                          select new
+                          {
+                              photoId = photo.PhotoId,
+                              photoPictureData = photo.PhotoPictureData
+                          }).ToList();
+            return Ok(result);
+        }
+
         [HttpPost]
         public async Task<ActionResult<Photo>> PostPhoto(Photo photo)
         {

@@ -90,7 +90,7 @@ namespace WebApiFlorence.Controllers
 
             var user = new User
             {
-                UserId = 40,
+                UserId = 1,
                 FirstName = "Ramona",
                 LastName = "Oana",
                 Address = "Strada Principala, Numarul 348",
