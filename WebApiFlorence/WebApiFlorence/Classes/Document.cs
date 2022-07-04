@@ -8,6 +8,5 @@ namespace WebApiFlorence
         [Required(ErrorMessage = "Signing Date is required")]
         public DateTime SigningDate { get; set; }
         public byte[]? ContentDocument { get; set; }
-        public int ReservationId { get; set; }
     }
 }

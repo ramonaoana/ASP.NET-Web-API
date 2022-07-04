@@ -54,7 +54,7 @@ namespace WebApiFlorence.Controllers
         }
 
         [HttpPost("postDrinksMenusProducts")]
-        public async Task<ActionResult<DrinksMenuProduct>> PostDishes(List<DrinksMenuProduct> drinksmenus)
+        public async Task<ActionResult<DrinksMenuProduct>> PostDrinksMenu(List<DrinksMenuProduct> drinksmenus)
         {
 
             foreach (var item in drinksmenus)
@@ -73,7 +73,20 @@ namespace WebApiFlorence.Controllers
                                     where drinksMenuProducts.DrinksMenuId == item.DrinksMenuId && drinksMenuProducts.ProductId == item.ProductId
                                     select drinksMenu).FirstOrDefault();
 
+                var queryMenu = (from drinksMenus in _context.DrinksMenus
+                                       join menu in _context.Menus on drinksMenus.DrinksMenuId equals menu.DrinksMenuId
+                                       where drinksMenus.DrinksMenuId == item.DrinksMenuId
+                                       select menu).ToList();
+
                 queryDrinksMenu.DrinksMenuPrice += queryProduct.ProductPrice;
+
+                foreach (var menu in queryMenu)
+                {
+                    menu.MenuPrice += queryProduct.ProductPrice;
+                }
+
+                    
+
 
                 await _context.SaveChangesAsync();
 

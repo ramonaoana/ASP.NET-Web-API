@@ -29,6 +29,18 @@ namespace WebApiFlorence.Controllers
             return await _context.Reservations.ToListAsync();
         }
 
+        [HttpGet("getReservationsDates")]
+        public IActionResult getReservationsDates()
+        {
+            var result = (from reservation in _context.Reservations
+                          where reservation.StatusReservation==1
+                          select new
+                          {
+                              dateEvent = reservation.DateEvent
+                          }).ToList();
+            return Ok(result);
+        }
+
         // GET: api/Reservations/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Reservation>> GetReservation(int id)
@@ -42,6 +54,32 @@ namespace WebApiFlorence.Controllers
 
             return reservation;
         }
+
+        
+        [HttpGet("getReservationsByUser/{idUser}")]
+        public IActionResult GetReservationsByUser(int idUser)
+        {
+            var query = (from reservations in _context.Reservations
+                         join menu in _context.Menus on reservations.MenuId equals menu.MenuId
+                         join foodMenu in _context.FoodMenus on menu.FoodMenuId equals foodMenu.FoodMenuId
+                         join payment in _context.Payments on reservations.PaymentId equals payment.PaymentId
+                         where reservations.UserId == idUser
+                         select new
+                         {
+                             reservationDateEvent = reservations.DateEvent,
+                             reservationDateReservation = reservations.ReservationDate,
+                             reservationTypeEvent = reservations.ReservationTypeEvent,
+                             reservationPeople = reservations.NrPeople,
+                             reservationStatus = reservations.StatusReservation,
+                             reservationMenuPrice = menu.MenuPrice*reservations.NrPeople,
+                             reservationMenuName = foodMenu.FoodMenuName,
+                             reservationMenuAvans = payment.AmountPayment,
+                             reservationDiscount=reservations.DiscountId
+
+                         }).ToList();
+            return Ok(query);
+        }
+
 
 
         // PUT: api/Reservations/5

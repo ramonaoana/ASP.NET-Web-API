@@ -61,9 +61,6 @@ namespace WebApiFlorence.Controllers
             return Ok(result);
         }
 
-
-        // PUT: api/Reviews/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutReview(int id, Review review)
         {
@@ -93,8 +90,7 @@ namespace WebApiFlorence.Controllers
             return NoContent();
         }
 
-        // POST: api/Reviews
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+
         [HttpPost]
         public async Task<ActionResult<Review>> PostReview(Review review)
         {
@@ -104,7 +100,7 @@ namespace WebApiFlorence.Controllers
             return CreatedAtAction("GetReview", new { id = review.ReviewId }, review);
         }
 
-        // DELETE: api/Reviews/5
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteReview(int id)
         {

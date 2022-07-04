@@ -55,6 +55,18 @@ namespace WebApiFlorence.Controllers
             return Ok(result);
         }
 
+        [HttpGet("getMenuPrice/{name}")]
+        public IActionResult GetMenuPrice(String name)
+        {
+            var result = (from menu in _context.Menus
+                          where menu.MenuName == name
+                          select new
+                          {
+                              menuPrice = menu.MenuPrice
+                          }).FirstOrDefault();
+            return Ok(result);
+        }
+
         [HttpGet("getFoodMenusWithDetails/{name}")]
         public MenuDetails GetFoodMenuFromMenus(string name)
         {
@@ -151,6 +163,66 @@ namespace WebApiFlorence.Controllers
             }
             menuDetails.Dishes = list;
             return menuDetails;
+        }
+
+        [HttpGet("getMenusWithDetails/{type}")]
+        public List<MenuDetails> GetMenusByType(int type)
+        {
+            List<MenuDetails> menusDetails = new List<MenuDetails>();
+
+            var query = (from menu in _context.Menus
+                                join foodMenu in _context.FoodMenus on menu.FoodMenuId equals foodMenu.FoodMenuId
+                                join drinksMenu in _context.DrinksMenus on menu.DrinksMenuId equals drinksMenu.DrinksMenuId
+                                 where menu.MenuTypeEvent == type
+                                 select new
+                                 {
+                                     foodMenu = foodMenu,
+                                     menuDetails = menu,
+                                     menuDrinks=drinksMenu
+                                 }).ToList();
+
+            foreach (var item in query)
+            {
+                MenuDetails menuDetails = new MenuDetails();
+                menuDetails.FoodMenu = item.foodMenu;
+                menuDetails.DrinksMenu = item.menuDrinks;
+                menuDetails.Menu = item.menuDetails;
+
+                var queryDishes = (from foodMenu in _context.FoodMenus
+                                   join foodMenuDishes in _context.FoodMenuDishes on foodMenu.FoodMenuId equals foodMenuDishes.FoodMenuId
+                                   join dishes in _context.Dishes on foodMenuDishes.DishId equals dishes.DishId
+                                   where foodMenu.FoodMenuId == item.foodMenu.FoodMenuId
+                                   select dishes).ToList();
+
+                var queryDrinks = (from drinksMenu in _context.DrinksMenus
+                                   join drinksProducts in _context.DrinksMenuProducts on drinksMenu.DrinksMenuId equals drinksProducts.DrinksMenuId
+                                   join products in _context.Products on drinksProducts.ProductId equals products.ProductId
+                                   where drinksMenu.DrinksMenuId == item.menuDrinks.DrinksMenuId
+                                   select products).ToList();
+
+                menuDetails.Drinks = queryDrinks;
+
+                List<DishDetails> listOfDishDetails = new List<DishDetails>();
+                foreach (Dish d in queryDishes)
+                {
+                    DishDetails dishDetails = new DishDetails();
+                    dishDetails.dish = d;
+
+                    var queryProductsList = (from dish in _context.Dishes
+                                             join dishesProducts in _context.DishProducts on dish.DishId equals dishesProducts.DishId
+                                             join products in _context.Products on dishesProducts.ProductId equals products.ProductId
+                                             where dish.DishId == d.DishId
+                                             select products).ToList();
+                    dishDetails.productsList = queryProductsList;
+                    listOfDishDetails.Add(dishDetails);
+                }
+
+                menuDetails.Dishes = listOfDishDetails;
+
+                menusDetails.Add(menuDetails);
+            }
+            return menusDetails;
+
         }
 
         [HttpPut("{id}")]

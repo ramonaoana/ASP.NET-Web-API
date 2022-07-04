@@ -1,43 +1,80 @@
-﻿@model WebApiFlorence.User
+﻿@model WebApiFlorence.Classes.ReservationDetails
 
 @{ var firstName = @Model.FirstName;}
 @{ var lastName = @Model.LastName;}
-@{ var address = @Model.Address; }
+@{ var address = @Model.Addresse; }
 @{ var town = @Model.Town; }
 @{ var cnp = @Model.CNP; }
+@{ var county = @Model.County; }
+
+@{ var reservationPeople = @Model.ReservationNrPeople; }
+@{ var reservationDate = @Model.ReservationDate; }
+@{
+    var reservationTypeEvent= @Model.ReservationTypeEvent;
+}
+
+@{var menuName = @Model.MenuName;}
+@{var menuPrice = @Model.MenuPrice;}
+@{var drinksMenuPrice = @Model.DrinksMenuPrice;}
+@{var advance = @Model.Advance;}
+
+@{var foodMenuName = @Model.FoodMenuName;}
+@{var foodMenuPrice = @Model.FoodMenuPrice;}
+@{var firstDishName = @Model.FirstDish;}
+@{var firstDishProducts = @Model.FirstDishProducts;}
+
+@{var secondDishName = @Model.SecondDish;}
+@{var secondDishProducts = @Model.SecondDishProducts;}
+
+@{var thirdDishName = @Model.ThirdDish;}
+@{var thirdDishProducts= @Model.ThirdDishProducts;}
+
+@{var fourthDishName = @Model.FourthDish;}
+@{var fourthDishProducts = @Model.FourthDishProducts;}
+
+@{var date = @Model.currentDate;}
+@{var total = @Model.TotalPrice;}
+@{var documentDate = @Model.DocumentDate;}
 
 
 <html>
     <head>
     <body>
         <h2><center>CONTRACT DE PRESTARI SERVICII</center></h2>
-        <h2><center>Nr. 1 din data 26.05.2022</center></h2>
+        <h2><center>Nr. din data @documentDate</center></h2>
 
         <h1 style="font-size:medium">PARTILE CONTRACTANTE</h1>
         <p style="font-size:large">1.1. SC FLORENCE SRL, cu sediul social in Domnesti, Soseaua Ioan Cuza, nr. 25, inregistrata la Registrul Comertului Bucuresti, sub Nr J40/7463/2002, cod unic de inregistrare RO 14810201, telefon 0723352535, avand contul de virament 
             RO21BRDE441AD3456785, deschis la BRD Sucursala Unirii, reprezentata de domnul Stan Adrian Gabriel, in calitate de 
             Administrator, in calitate de <b>prestator</b>, pe de o parte,
         </p>
-         <p style="font-size:large">1.2. <b>Domnul/Doamna</b> @firstName , @firstName , @address , @town, @address, posesorul codului numeric personal @cnp, in calitate de
+         <p style="font-size:large">1.2. <b>Domnul/Doamna</b> @firstName @lastName , @address ,@county, @town, @address, posesorul codului numeric personal @cnp, in calitate de
             <b>beneficiar</b>, pe de alta parte, <br/> au convenit sa incheie prezentul contract de prestări de servicii, cu respectarea următoarelor clauze:</p>
         <br />
         <h1 style="font-size:medium">II. OBIECTUL CONTRACTULUI</h1>
        <p style="font-size:large">
            2.1. Obiectul contractului îl reprezintă: <br />
-                Furnizarea de servicii de restaurant (servirea mesei) pentru botez, pentru un numar de 200 persoane, în locaţia restaurantului Florence pe data de 18 mai, intre orele 14 si 24. Bauturile consumate dupa orele 24 vor fi achitate suplimentar prezentului contract.<br />
-           2.2. Prestatorul pune la dispozitie beneficiarului cotă parte din restaurantului pentruorganizarea petrecerii de botez pe data de 18 mai. <br />
-           2.3. In urma contractului, beneficiarul a solicitat 200 meniuri de tip Gold in valoare de 10000 lei. <br />
+                Furnizarea de servicii de restaurant (servirea mesei) pentru @reservationTypeEvent, pentru un numar de @reservationPeople persoane, în locaţia restaurantului Florence pe data @reservationDate . Bauturile consumate dupa orele 24 vor fi achitate suplimentar prezentului contract.<br />
+           2.2. Prestatorul pune la dispozitie beneficiarului cotă parte din restaurantul Florence pentru organizarea petrecerii de @reservationTypeEvent. <br />
+           2.3. In urma contractului, beneficiarul a solicitat @reservationPeople meniuri de tip @foodMenuName, avand pretul de @foodMenuPrice per persoana, avand incluse: <br />
+           @firstDishName : @firstDishProducts <br />
+           @secondDishName : @secondDishProducts <br /> 
+           @thirdDishName : @thirdDishProducts <br />
+           @fourthDishName :  @fourthDishProducts <br />
+          Suma totala pe care trebuie sa o plateasca clientul este de @total Euro. 
+          Avansul platit de acesta este de:@advance Euro.
+           <br />
            2.4. Prestatorul se obligă să prepare meniul şi să pregătească băuturile conform regulilor meseriei si acordului încheiat în prealabil între beneficiar şi prestator.<br />
        </p>
        <h1 style="font-size:medium">III. DURATA CONTRACTULUI</h1>
         <p style="font-size:large">
-            3.1. Contractul se încheie pe o durată de 1 lună, începând de la data de 18 aprilie 2012 şi până la data de 18 mai 2012.
+            3.1. Contractul se încheie pe o durată de 1 lună, începând de la data de @date.
        </p>
 
        <h1 style="font-size:medium">IV. PRETUL CONTRACTULUI</h1>
         <p style="font-size:large">
-            4.1. Preţul prestaţiei se stabileste în felul următor: <br /> Preţul stabilit între prestator şi beneficiar este de 150 lei/persoană invitată, din care 120 lei/persoană
-pentru mancare şi 30 lei/persoană pentru băuturile alcoolice/nealcoolice; Beneficiarul se obligă să aiba minim 40 şi dar poate ajunge la 60 de persoane invitate.
+            4.1. Preţul prestaţiei se stabileste în felul următor: <br /> Preţul stabilit între prestator şi beneficiar este de @menuPrice euro/persoană invitată, dintre care @foodMenuPrice euro/persoană
+pentru mancare şi @drinksMenuPrice Euro pentru băuturile alcoolice/nealcoolice; Beneficiarul se obligă să aiba minim @reservationPeople de persoane şi poate avea maxim 20 de persoane in plus.
        </p>
 
        <h1 style="font-size:medium">IV. MODALITATI DE PLATA</h1>
@@ -79,9 +116,12 @@ pentru mancare şi 30 lei/persoană pentru băuturile alcoolice/nealcoolice; Ben
 
 
 
+
+
         <br />
-        <p>PRESTATOR:                                                 BENEFICIAR:</p>
-        <p> STAN ADRIAN GABRIEL                                       @firstName @lastName</p>
+        <p>PRESTATOR: STAN ADRIAN GABRIEL   </p>
+        <p>BENEFICAR: @firstName @lastName   </p>
+        
 
         <br /> 
         

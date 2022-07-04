@@ -12,7 +12,7 @@ using WebApiFlorence.Data;
 namespace WebApiFlorence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220628062547_FirstCreate")]
+    [Migration("20220704050928_FirstCreate")]
     partial class FirstCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -217,8 +217,14 @@ namespace WebApiFlorence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("MemberONRCCode")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("MemberType")
                         .HasColumnType("int");
+
+                    b.Property<string>("MemberUniqueCode")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NumberPhone")
                         .IsRequired()
@@ -387,46 +393,6 @@ namespace WebApiFlorence.Migrations
                     b.ToTable("Review");
                 });
 
-            modelBuilder.Entity("WebApiFlorence.Classes.SpecialOffer", b =>
-                {
-                    b.Property<int>("SpecialOfferId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SpecialOfferId"), 1L, 1);
-
-                    b.Property<string>("DescriptionOffer")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("EndDateOffer")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("MenuId")
-                        .HasColumnType("int");
-
-                    b.Property<double>("PriceOffer")
-                        .HasColumnType("float");
-
-                    b.Property<int>("SpecialOfferTypeEvent")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("StartDateOffer")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("SpecialOfferId");
-
-                    b.HasIndex("MenuId");
-
-                    b.ToTable("SpecialOffers");
-                });
-
             modelBuilder.Entity("WebApiFlorence.Document", b =>
                 {
                     b.Property<int>("DocumentId")
@@ -438,15 +404,10 @@ namespace WebApiFlorence.Migrations
                     b.Property<byte[]>("ContentDocument")
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<int>("ReservationId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("SigningDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("DocumentId");
-
-                    b.HasIndex("ReservationId");
 
                     b.ToTable("Documents");
                 });
@@ -526,19 +487,22 @@ namespace WebApiFlorence.Migrations
                     b.Property<int?>("DiscountId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("MenuId")
+                    b.Property<int?>("DocumentId")
                         .HasColumnType("int");
 
-                    b.Property<string>("NotesDrinksMenu")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NotesFoodMenu")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("MenuId")
+                        .HasColumnType("int");
 
                     b.Property<double?>("NrPeople")
                         .HasColumnType("float");
 
                     b.Property<int?>("PaymentId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ReservationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ReservationTypeEvent")
                         .HasColumnType("int");
 
                     b.Property<int>("StatusReservation")
@@ -553,6 +517,8 @@ namespace WebApiFlorence.Migrations
                     b.HasKey("ReservationId");
 
                     b.HasIndex("DiscountId");
+
+                    b.HasIndex("DocumentId");
 
                     b.HasIndex("MenuId");
 
@@ -744,26 +710,6 @@ namespace WebApiFlorence.Migrations
                         .HasConstraintName("FK_Review_User");
                 });
 
-            modelBuilder.Entity("WebApiFlorence.Classes.SpecialOffer", b =>
-                {
-                    b.HasOne("WebApiFlorence.Classes.Menu", null)
-                        .WithMany()
-                        .HasForeignKey("MenuId")
-                        .OnDelete(DeleteBehavior.ClientNoAction)
-                        .IsRequired()
-                        .HasConstraintName("FK_SpecialOffer_Menu");
-                });
-
-            modelBuilder.Entity("WebApiFlorence.Document", b =>
-                {
-                    b.HasOne("WebApiFlorence.Reservation", null)
-                        .WithMany()
-                        .HasForeignKey("ReservationId")
-                        .OnDelete(DeleteBehavior.ClientNoAction)
-                        .IsRequired()
-                        .HasConstraintName("FK_Document_Reservation");
-                });
-
             modelBuilder.Entity("WebApiFlorence.Request", b =>
                 {
                     b.HasOne("WebApiFlorence.User", null)
@@ -781,6 +727,12 @@ namespace WebApiFlorence.Migrations
                         .HasForeignKey("DiscountId")
                         .OnDelete(DeleteBehavior.ClientNoAction)
                         .HasConstraintName("FK_Reservation_Discount");
+
+                    b.HasOne("WebApiFlorence.Document", null)
+                        .WithMany()
+                        .HasForeignKey("DocumentId")
+                        .OnDelete(DeleteBehavior.ClientNoAction)
+                        .HasConstraintName("FK_Reservation_Document");
 
                     b.HasOne("WebApiFlorence.Classes.Menu", null)
                         .WithMany()

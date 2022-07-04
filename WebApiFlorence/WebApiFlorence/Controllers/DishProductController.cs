@@ -73,6 +73,18 @@ namespace WebApiFlorence.Controllers
 
                 queryDish.DishPrice += queryProduct.ProductPrice;
 
+                var queryMenu = (from dishes in _context.Dishes
+                                 join foodMenuDishes in _context.FoodMenuDishes on dishes.DishId equals foodMenuDishes.DishId
+                                 join foodMenu in _context.FoodMenus on foodMenuDishes.FoodMenuId equals foodMenu.FoodMenuId
+                                 join menu in _context.Menus on foodMenu.FoodMenuId equals menu.FoodMenuId
+                                 where dishes.DishId == item.DishId
+                                 select menu).ToList();
+
+                foreach (var menu in queryMenu)
+                {
+                    menu.MenuPrice += queryProduct.ProductPrice;
+                }
+
                 await _context.SaveChangesAsync();
 
             }

@@ -17,7 +17,6 @@ namespace WebApiFlorence.Data
         public DbSet<Member> Members { get; set; }
         public DbSet<Package> Packages { get; set; }
         public DbSet<Payment> Payments { get; set; }
-        public DbSet<SpecialOffer> SpecialOffers { get; set; }
         public DbSet<MailRequest> MailRequest { get; set; }
         public DbSet<ReservationPackage> ReservationPackages { get; set; }
         public DbSet<WebApiFlorence.Classes.Review> Review { get; set; }
@@ -28,15 +27,7 @@ namespace WebApiFlorence.Data
         public DbSet<FoodMenu> FoodMenus { get; set; }
         public DbSet<FoodMenuDish> FoodMenuDishes { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            // DOCUMENT 
-
-            modelBuilder.Entity<Document>()
-                .HasOne<Reservation>()
-                .WithMany()
-                .HasForeignKey(p => p.ReservationId)
-                .OnDelete(DeleteBehavior.ClientNoAction)
-                .HasConstraintName("FK_Document_Reservation");
+        { 
 
             // MAIL 
 
@@ -55,6 +46,13 @@ namespace WebApiFlorence.Data
              .HasForeignKey(p => p.UserId)
              .OnDelete(DeleteBehavior.ClientNoAction)
              .HasConstraintName("FK_Reservation_User");
+
+            modelBuilder.Entity<Reservation>()
+             .HasOne<Document>()
+             .WithMany()
+             .HasForeignKey(p => p.DocumentId)
+             .OnDelete(DeleteBehavior.ClientNoAction)
+             .HasConstraintName("FK_Reservation_Document");
 
             modelBuilder.Entity<Reservation>()
              .HasOne<Payment>()
@@ -96,15 +94,6 @@ namespace WebApiFlorence.Data
               .HasForeignKey(p => p.UserId)
               .OnDelete(DeleteBehavior.ClientNoAction)
               .HasConstraintName("FK_Review_User");
-
-            //SpecialOffer
-
-            modelBuilder.Entity<SpecialOffer>()
-              .HasOne<Menu>()
-              .WithMany()
-              .HasForeignKey(p => p.MenuId)
-              .OnDelete(DeleteBehavior.ClientNoAction)
-              .HasConstraintName("FK_SpecialOffer_Menu");
 
 
             //MENU

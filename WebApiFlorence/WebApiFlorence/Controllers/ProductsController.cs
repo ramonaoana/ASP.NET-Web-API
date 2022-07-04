@@ -91,6 +91,14 @@ namespace WebApiFlorence.Controllers
 
             return Ok();
         }
+        [HttpGet("getProductsByType/{type}")]
+        public IActionResult GetProductsByType(int type)
+        {
+            var result = (from products in _context.Products
+                          where products.ProductCategory == type
+                          select products).ToList();
+            return Ok(result);
+        }
 
 
         [HttpDelete("{id}")]

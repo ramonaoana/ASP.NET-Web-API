@@ -39,6 +39,20 @@ namespace WebApiFlorence.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Documents",
+                columns: table => new
+                {
+                    DocumentId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SigningDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ContentDocument = table.Column<byte[]>(type: "varbinary(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Documents", x => x.DocumentId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "DrinksMenus",
                 columns: table => new
                 {
@@ -76,6 +90,8 @@ namespace WebApiFlorence.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     OwnerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MemberType = table.Column<int>(type: "int", nullable: false),
+                    MemberONRCCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MemberUniqueCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NumberPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Addresse = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Town = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -345,14 +361,15 @@ namespace WebApiFlorence.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NrPeople = table.Column<double>(type: "float", nullable: true),
                     DateEvent = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ReservationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     StatusReservation = table.Column<int>(type: "int", nullable: false),
-                    NotesFoodMenu = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NotesDrinksMenu = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ReservationTypeEvent = table.Column<int>(type: "int", nullable: false),
                     hasInvitation = table.Column<bool>(type: "bit", nullable: true),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     PaymentId = table.Column<int>(type: "int", nullable: true),
                     MenuId = table.Column<int>(type: "int", nullable: true),
-                    DiscountId = table.Column<int>(type: "int", nullable: true)
+                    DiscountId = table.Column<int>(type: "int", nullable: true),
+                    DocumentId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -362,6 +379,11 @@ namespace WebApiFlorence.Migrations
                         column: x => x.DiscountId,
                         principalTable: "Discounts",
                         principalColumn: "DiscountId");
+                    table.ForeignKey(
+                        name: "FK_Reservation_Document",
+                        column: x => x.DocumentId,
+                        principalTable: "Documents",
+                        principalColumn: "DocumentId");
                     table.ForeignKey(
                         name: "FK_Reservation_Menu",
                         column: x => x.MenuId,
@@ -377,51 +399,6 @@ namespace WebApiFlorence.Migrations
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "UserId");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "SpecialOffers",
-                columns: table => new
-                {
-                    SpecialOfferId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    SpecialOfferTypeEvent = table.Column<int>(type: "int", nullable: false),
-                    PriceOffer = table.Column<double>(type: "float", nullable: false),
-                    DescriptionOffer = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StartDateOffer = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndDateOffer = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    MenuId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SpecialOffers", x => x.SpecialOfferId);
-                    table.ForeignKey(
-                        name: "FK_SpecialOffer_Menu",
-                        column: x => x.MenuId,
-                        principalTable: "Menus",
-                        principalColumn: "MenuId");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Documents",
-                columns: table => new
-                {
-                    DocumentId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    SigningDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ContentDocument = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    ReservationId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Documents", x => x.DocumentId);
-                    table.ForeignKey(
-                        name: "FK_Document_Reservation",
-                        column: x => x.ReservationId,
-                        principalTable: "Reservations",
-                        principalColumn: "ReservationId");
                 });
 
             migrationBuilder.CreateTable(
@@ -450,11 +427,6 @@ namespace WebApiFlorence.Migrations
                 name: "IX_DishProducts_DishId",
                 table: "DishProducts",
                 column: "DishId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Documents_ReservationId",
-                table: "Documents",
-                column: "ReservationId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_DrinksMenuProducts_ProductId",
@@ -502,6 +474,11 @@ namespace WebApiFlorence.Migrations
                 column: "DiscountId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Reservations_DocumentId",
+                table: "Reservations",
+                column: "DocumentId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Reservations_MenuId",
                 table: "Reservations",
                 column: "MenuId");
@@ -520,20 +497,12 @@ namespace WebApiFlorence.Migrations
                 name: "IX_Review_UserId",
                 table: "Review",
                 column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_SpecialOffers_MenuId",
-                table: "SpecialOffers",
-                column: "MenuId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "DishProducts");
-
-            migrationBuilder.DropTable(
-                name: "Documents");
 
             migrationBuilder.DropTable(
                 name: "DrinksMenuProducts");
@@ -557,9 +526,6 @@ namespace WebApiFlorence.Migrations
                 name: "Review");
 
             migrationBuilder.DropTable(
-                name: "SpecialOffers");
-
-            migrationBuilder.DropTable(
                 name: "Products");
 
             migrationBuilder.DropTable(
@@ -576,6 +542,9 @@ namespace WebApiFlorence.Migrations
 
             migrationBuilder.DropTable(
                 name: "Discounts");
+
+            migrationBuilder.DropTable(
+                name: "Documents");
 
             migrationBuilder.DropTable(
                 name: "Menus");
