@@ -2,6 +2,7 @@
 {
     public class ReservationDetails
     {
+        public int DocumentNumber { get; set; }
         public String DocumentDate { get; set; }
         public String currentDate { get; set; }
         public String ReservationNrPeople{ get; set; }
@@ -31,6 +32,7 @@
         public String DrinksMenuProducts { get; set; }
         public Double TotalPrice { get; set; }
         public Double Advance { get; set; }
+        public Double AmountPackages { get; set; }
 
     }
 }

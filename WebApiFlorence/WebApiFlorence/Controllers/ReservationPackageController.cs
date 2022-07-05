@@ -31,7 +31,7 @@ namespace WebApiFlorence.Controllers
 
 
         [HttpGet("getReservationPackage")]
-        public async Task<ActionResult<ReservationPackage>> GetReservationPackage([FromQuery]int reservationId, [FromQuery] int packageId)
+        public async Task<ActionResult<ReservationPackage>> GetReservationPackage([FromQuery] int reservationId, [FromQuery] int packageId)
         {
             var reservationPackage = await _context.ReservationPackages.FirstOrDefaultAsync(x => x.ReservationId == reservationId && x.PackageId == packageId);
 
@@ -51,6 +51,29 @@ namespace WebApiFlorence.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetReservationPackage", new { reservationId = reservationPackage.ReservationId, packageId = reservationPackage.ReservationId }, reservationPackage);
+        }
+
+        [HttpPost("postReservationsPackages")]
+        public async Task<ActionResult<ReservationPackage>> PostReservationsPackages(List<ReservationPackage> reservationPackages)
+        {
+            foreach (var item in reservationPackages)
+            {
+                _context.ReservationPackages.Add(item);
+                _context.SaveChanges();
+
+                var queryReservation = (from reservation in _context.Reservations
+                                        where reservation.ReservationId == item.ReservationId
+                                        select reservation).FirstOrDefault();
+
+                var queryPackage = (from package in _context.Packages
+                                    where package.PackageId == item.PackageId
+                                    select package).FirstOrDefault();
+
+                queryReservation.ReservationAmount += queryPackage.PricePackage;
+                _context.SaveChanges();
+            }
+
+            return Ok();
         }
     }
 }

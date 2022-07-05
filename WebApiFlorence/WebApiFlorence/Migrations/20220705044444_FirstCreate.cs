@@ -360,6 +360,7 @@ namespace WebApiFlorence.Migrations
                     ReservationId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NrPeople = table.Column<double>(type: "float", nullable: true),
+                    ReservationAmount = table.Column<double>(type: "float", nullable: true),
                     DateEvent = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ReservationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     StatusReservation = table.Column<int>(type: "int", nullable: false),

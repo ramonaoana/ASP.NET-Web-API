@@ -12,7 +12,7 @@ using WebApiFlorence.Data;
 namespace WebApiFlorence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220704050928_FirstCreate")]
+    [Migration("20220705044444_FirstCreate")]
     partial class FirstCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -498,6 +498,9 @@ namespace WebApiFlorence.Migrations
 
                     b.Property<int?>("PaymentId")
                         .HasColumnType("int");
+
+                    b.Property<double?>("ReservationAmount")
+                        .HasColumnType("float");
 
                     b.Property<DateTime>("ReservationDate")
                         .HasColumnType("datetime2");

@@ -85,6 +85,19 @@ namespace WebApiFlorence.Controllers
             return CreatedAtAction("GetPackage", new { id = package.PackageId }, package);
         }
 
+        [HttpPost("postPackages")]
+        public async Task<ActionResult<Package>> PostPackages(List<Package> packages)
+        {
+
+            foreach (var item in packages)
+            {
+                _context.Packages.Add(item);
+            }
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
         // DELETE: api/Packages/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePackage(int id)

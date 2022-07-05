@@ -497,6 +497,9 @@ namespace WebApiFlorence.Migrations
                     b.Property<int?>("PaymentId")
                         .HasColumnType("int");
 
+                    b.Property<double?>("ReservationAmount")
+                        .HasColumnType("float");
+
                     b.Property<DateTime>("ReservationDate")
                         .HasColumnType("datetime2");
 

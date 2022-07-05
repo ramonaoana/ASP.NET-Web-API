@@ -62,7 +62,6 @@ namespace WebApiFlorence.Controllers
             var query = (from reservations in _context.Reservations
                          join menu in _context.Menus on reservations.MenuId equals menu.MenuId
                          join foodMenu in _context.FoodMenus on menu.FoodMenuId equals foodMenu.FoodMenuId
-                         join payment in _context.Payments on reservations.PaymentId equals payment.PaymentId
                          where reservations.UserId == idUser
                          select new
                          {
@@ -71,9 +70,9 @@ namespace WebApiFlorence.Controllers
                              reservationTypeEvent = reservations.ReservationTypeEvent,
                              reservationPeople = reservations.NrPeople,
                              reservationStatus = reservations.StatusReservation,
-                             reservationMenuPrice = menu.MenuPrice*reservations.NrPeople,
+                             reservationAmount= reservations.ReservationAmount,
                              reservationMenuName = foodMenu.FoodMenuName,
-                             reservationMenuAvans = payment.AmountPayment,
+                             reservationMenuAvans = 0.1*reservations.ReservationAmount,
                              reservationDiscount=reservations.DiscountId
 
                          }).ToList();
@@ -118,8 +117,14 @@ namespace WebApiFlorence.Controllers
         [HttpPost]
         public async Task<ActionResult<Reservation>> PostReservation(Reservation reservation)
         {
+            var queryFoodMenu = (from menu in _context.Menus
+                                 where menu.MenuId == reservation.MenuId
+                                 select menu).FirstOrDefault();
+
+            reservation.ReservationAmount = queryFoodMenu.MenuPrice*reservation.NrPeople;
             _context.Reservations.Add(reservation);
             await _context.SaveChangesAsync();
+
 
             return CreatedAtAction("GetReservation", new { id = reservation.ReservationId }, reservation);
         }

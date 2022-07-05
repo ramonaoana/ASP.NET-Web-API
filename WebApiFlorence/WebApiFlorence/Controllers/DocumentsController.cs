@@ -87,6 +87,8 @@ namespace WebApiFlorence.Controllers
 
             Document document = new Document();
             ReservationDetails res = new ReservationDetails();
+            counter++;
+            res.DocumentNumber = counter;
 
             document.SigningDate = DateTime.Now;
             String date = DateTime.Now.ToString("dd/MM/yyyy");
@@ -102,14 +104,10 @@ namespace WebApiFlorence.Controllers
                                     where reservation.ReservationId == reservationId
                                     select reservation).FirstOrDefault();
 
-            var queryPayment = (from reservation in _context.Reservations
-                                join payment in _context.Payments on reservation.PaymentId equals payment.PaymentId
-                                where reservation.ReservationId == reservationId
-                                select payment).FirstOrDefault();
-
-            res.Advance = queryPayment.AmountPayment;
+            res.TotalPrice = (Double)queryReservation.ReservationAmount;
 
             res.ReservationNrPeople = queryReservation.NrPeople.ToString();
+            
             DateTime dateDocument = queryReservation.DateEvent.Value;
             String datee = dateDocument.ToString("dd/MM/yyyy");
             res.ReservationDate = datee;
@@ -172,7 +170,7 @@ namespace WebApiFlorence.Controllers
             res.FoodMenuPrice = queryFoodMenu.foodMenu.FoodMenuPrice;
             res.FoodMenuName = queryFoodMenu.foodMenu.FoodMenuName;
             res.DrinksMenuPrice = queryDrinksMenu.drinksMenu.DrinksMenuPrice;
-
+            res.Advance = 0;
 
             var queryDishes = (from foodMenu in _context.FoodMenus
                                join foodMenuDishes in _context.FoodMenuDishes on foodMenu.FoodMenuId equals foodMenuDishes.FoodMenuId
@@ -235,9 +233,24 @@ namespace WebApiFlorence.Controllers
             res.ThirdDishProducts = thirdListProducts;
             res.FourthDishProducts = fourthListProducts;
 
-            Double price = (Double)queryReservation.NrPeople * queryMenu.MenuPrice;
-            res.TotalPrice = price;
+            var queryPackages = (from packagesReservation in _context.ReservationPackages
+                                 where packagesReservation.ReservationId == reservationId
+                                 select packagesReservation).ToList();
 
+            Double sum = 0;
+
+            if (queryPackages.Count > 0)
+            {
+                foreach (var p in queryPackages)
+                {
+                    var queryPackage = (from package in _context.Packages
+                                        where package.PackageId == p.PackageId
+                                        select package).FirstOrDefault();
+                    sum += queryPackage.PricePackage;
+                }
+            }
+            res.AmountPackages = sum;
+ 
 
             var array = _generatedPdf.GetByteArray("Views/Contract.cshtml", res);
             return array;
@@ -251,6 +264,7 @@ namespace WebApiFlorence.Controllers
 
             Document document = new Document();
             ReservationDetails res = new ReservationDetails();
+            res.DocumentNumber = counter;
 
             document.SigningDate = DateTime.Now;
             String date = DateTime.Now.ToString("dd/MM/yyyy");
@@ -260,22 +274,25 @@ namespace WebApiFlorence.Controllers
             String currentDate = DateTime.Now.ToString("MM/dd/yyyy h:mm tt");
             res.currentDate = currentDate;
 
-
-
             var queryReservation = (from reservation in _context.Reservations
                                     where reservation.ReservationId == reservationId
                                     select reservation).FirstOrDefault();
+
+            res.TotalPrice = (Double)queryReservation.ReservationAmount;
 
             var queryPayment = (from reservation in _context.Reservations
                                 join payment in _context.Payments on reservation.PaymentId equals payment.PaymentId
                                 where reservation.ReservationId == reservationId
                                 select payment).FirstOrDefault();
 
+           
             res.Advance = queryPayment.AmountPayment;
+           
 
             res.ReservationNrPeople = queryReservation.NrPeople.ToString();
             DateTime dateDocument = queryReservation.DateEvent.Value;
             String datee = dateDocument.ToString("dd/MM/yyyy");
+            res.ReservationDate = datee;
             res.ReservationDate = datee;
 
             var queryUser = (from reservation in _context.Reservations
@@ -399,14 +416,32 @@ namespace WebApiFlorence.Controllers
             res.ThirdDishProducts = thirdListProducts;
             res.FourthDishProducts = fourthListProducts;
 
-            Double price = (Double)queryReservation.NrPeople * queryMenu.MenuPrice;
-            res.TotalPrice = price;
+            var queryPackages=(from packagesReservation in _context.ReservationPackages
+                               where packagesReservation.ReservationId==reservationId
+                               select packagesReservation).ToList();
+
+            Double sum = 0;
+
+            if (queryPackages.Count > 0)
+            {
+                foreach(var p in queryPackages)
+                {
+                    var queryPackage = (from package in _context.Packages
+                                        where package.PackageId == p.PackageId
+                                        select package).FirstOrDefault();
+                    sum += queryPackage.PricePackage;
+                }
+            } 
+            res.AmountPackages = sum;
+
 
             document.ContentDocument = await _generatedPdf.GetByteArray("Views/Contract.cshtml", res); ;
             _context.Documents.Add(document);
             _context.SaveChanges();
 
             queryReservation.DocumentId = document.DocumentId;
+            queryReservation.StatusReservation = 1;
+            queryReservation.ReservationAmount = res.TotalPrice;
             _context.SaveChanges();
 
             return document.ContentDocument;

@@ -76,11 +76,17 @@ namespace WebApiFlorence.Controllers
 
         // POST: api/Payments
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Payment>> PostPayment(Payment payment)
+        [HttpPost("postPaymentForRes/{idReservation}")]
+        public async Task<ActionResult<Payment>> PostPayment(int idReservation, Payment payment)
         {
             _context.Payments.Add(payment);
             await _context.SaveChangesAsync();
+
+            var query = (from res in _context.Reservations
+                         where res.ReservationId == idReservation
+                         select res).FirstOrDefault();
+            query.PaymentId=payment.PaymentId;
+            _context.SaveChanges();
 
             return CreatedAtAction("GetPayment", new { id = payment.PaymentId }, payment);
         }

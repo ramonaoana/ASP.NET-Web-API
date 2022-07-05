@@ -17,6 +17,7 @@
 @{var menuPrice = @Model.MenuPrice;}
 @{var drinksMenuPrice = @Model.DrinksMenuPrice;}
 @{var advance = @Model.Advance;}
+@{var documentNumber = @Model.DocumentNumber;}
 
 @{var foodMenuName = @Model.FoodMenuName;}
 @{var foodMenuPrice = @Model.FoodMenuPrice;}
@@ -35,13 +36,14 @@
 @{var date = @Model.currentDate;}
 @{var total = @Model.TotalPrice;}
 @{var documentDate = @Model.DocumentDate;}
+@{var amountPackages = @Model.AmountPackages;}
 
 
 <html>
     <head>
     <body>
         <h2><center>CONTRACT DE PRESTARI SERVICII</center></h2>
-        <h2><center>Nr. din data @documentDate</center></h2>
+        <h2><center>Nr.@documentNumber din data @documentDate</center></h2>
 
         <h1 style="font-size:medium">PARTILE CONTRACTANTE</h1>
         <p style="font-size:large">1.1. SC FLORENCE SRL, cu sediul social in Domnesti, Soseaua Ioan Cuza, nr. 25, inregistrata la Registrul Comertului Bucuresti, sub Nr J40/7463/2002, cod unic de inregistrare RO 14810201, telefon 0723352535, avand contul de virament 
@@ -56,12 +58,12 @@
            2.1. Obiectul contractului îl reprezintă: <br />
                 Furnizarea de servicii de restaurant (servirea mesei) pentru @reservationTypeEvent, pentru un numar de @reservationPeople persoane, în locaţia restaurantului Florence pe data @reservationDate . Bauturile consumate dupa orele 24 vor fi achitate suplimentar prezentului contract.<br />
            2.2. Prestatorul pune la dispozitie beneficiarului cotă parte din restaurantul Florence pentru organizarea petrecerii de @reservationTypeEvent. <br />
-           2.3. In urma contractului, beneficiarul a solicitat @reservationPeople meniuri de tip @foodMenuName, avand pretul de @foodMenuPrice per persoana, avand incluse: <br />
+           2.3. In urma contractului, beneficiarul a solicitat @reservationPeople meniuri de tip @foodMenuName, avand pretul de @menuPrice euro per persoana, avand incluse: <br />
            @firstDishName : @firstDishProducts <br />
            @secondDishName : @secondDishProducts <br /> 
            @thirdDishName : @thirdDishProducts <br />
            @fourthDishName :  @fourthDishProducts <br />
-          Suma totala pe care trebuie sa o plateasca clientul este de @total Euro. 
+          Suma totala pe care trebuie sa o plateasca clientul este de @total Euro, dintre care @amountPackages Euro reprezinta pretul pachetelor speciale adaugate la rezervare.
           Avansul platit de acesta este de:@advance Euro.
            <br />
            2.4. Prestatorul se obligă să prepare meniul şi să pregătească băuturile conform regulilor meseriei si acordului încheiat în prealabil între beneficiar şi prestator.<br />
@@ -74,7 +76,7 @@
        <h1 style="font-size:medium">IV. PRETUL CONTRACTULUI</h1>
         <p style="font-size:large">
             4.1. Preţul prestaţiei se stabileste în felul următor: <br /> Preţul stabilit între prestator şi beneficiar este de @menuPrice euro/persoană invitată, dintre care @foodMenuPrice euro/persoană
-pentru mancare şi @drinksMenuPrice Euro pentru băuturile alcoolice/nealcoolice; Beneficiarul se obligă să aiba minim @reservationPeople de persoane şi poate avea maxim 20 de persoane in plus.
+pentru mancare şi @drinksMenuPrice Euro pentru băuturile alcoolice/nealcoolice. Beneficiarul se obligă să aiba minim @reservationPeople de persoane şi poate avea maxim 20 de persoane in plus.
        </p>
 
        <h1 style="font-size:medium">IV. MODALITATI DE PLATA</h1>
