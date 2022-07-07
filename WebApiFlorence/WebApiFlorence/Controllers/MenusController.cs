@@ -55,6 +55,7 @@ namespace WebApiFlorence.Controllers
             return Ok(result);
         }
 
+
         [HttpGet("getMenuPrice/{name}")]
         public IActionResult GetMenuPrice(String name)
         {
@@ -62,7 +63,8 @@ namespace WebApiFlorence.Controllers
                           where menu.MenuName == name
                           select new
                           {
-                              menuPrice = menu.MenuPrice
+                              menuPrice = menu.MenuPrice,
+                              menuId=menu.MenuId
                           }).FirstOrDefault();
             return Ok(result);
         }

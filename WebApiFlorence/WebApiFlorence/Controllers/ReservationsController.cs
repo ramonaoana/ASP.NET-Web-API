@@ -79,6 +79,24 @@ namespace WebApiFlorence.Controllers
             return Ok(query);
         }
 
+        [HttpGet("getFirstReservationByUser/{idUser}")]
+        public IActionResult GetFirstReservationByUser(int idUser)
+        {
+            DateTime currentDate = DateTime.Now;
+            var query = (from reservations in _context.Reservations
+                         where reservations.UserId == idUser && reservations.DateEvent > currentDate && reservations.StatusReservation==1
+                         orderby reservations.DateEvent ascending
+                         select reservations).FirstOrDefault();
+
+            TimeSpan nrDays = (TimeSpan)(query.DateEvent - DateTime.Now);
+            Double nr = nrDays.Days;
+
+
+
+            return Ok(nr);
+
+        }
+
 
 
         // PUT: api/Reservations/5
