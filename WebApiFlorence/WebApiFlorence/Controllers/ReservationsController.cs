@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApiFlorence;
+using WebApiFlorence.Classes;
 using WebApiFlorence.Data;
 
 namespace WebApiFlorence.Controllers
@@ -90,9 +91,6 @@ namespace WebApiFlorence.Controllers
 
             TimeSpan nrDays = (TimeSpan)(query.DateEvent - DateTime.Now);
             Double nr = nrDays.Days;
-
-
-
             return Ok(nr);
 
         }
@@ -167,5 +165,104 @@ namespace WebApiFlorence.Controllers
         {
             return _context.Reservations.Any(e => e.ReservationId == id);
         }
+
+        [HttpGet("getReservationsCompletedUncompleted")]
+        public ReportNumberOfReservations GetReservationsCompletedUncompleted()
+        {
+
+            ReportNumberOfReservations report = new ReportNumberOfReservations();
+
+            var queryResCompleted = (from reservations in _context.Reservations
+                         where reservations.StatusReservation == 1
+                         select reservations).ToList();
+
+
+            var queryResUncompleted = (from reservations in _context.Reservations
+                                     where reservations.StatusReservation == 0
+                                     select reservations).ToList();
+
+            int nrCompleted = queryResCompleted.Count;
+            int nrUncompleted = queryResUncompleted.Count;
+
+            report.NrReservationsCompleted = nrCompleted;
+            report.NrReservationsUncompleted = nrUncompleted;
+            report.TotalNrOfReservations = nrCompleted + nrUncompleted;
+
+            return report;
+
+
+        }
+
+        [HttpGet("getReservationsByMonth")]
+        public IActionResult GetReservationsByMonth()
+        {
+            DateTime currentDate = DateTime.Now;
+            var queryReservations = (from reservations in _context.Reservations
+                            where reservations.StatusReservation == 1 && ((DateTime)reservations.DateEvent).Year==currentDate.Year
+                            select reservations).ToList();
+
+            var results = queryReservations.GroupBy(n => ((DateTime)n.DateEvent).Month)
+                            .Select(g => new { Month = g.Key, Count = g.Count() }).ToList();
+            List<int> values = new List<int>();            
+            for(int i = 1; i < 13; i++)
+            {
+                int k = 0;
+                foreach(var item in results)
+                {
+                    if (item.Month.Equals(i))
+                    {
+                        values.Add(item.Count);
+                        k = 1;
+                    } 
+                }
+                if (k == 0)
+                {
+                    values.Add(0);
+                }
+            }
+
+            return Ok(values);
+
+
+        }
+
+        [HttpGet("getReservationsForFiveYears")]
+        public IActionResult GetReservationsForFiveYears()
+        {
+            DateTime currentDate = DateTime.Now;
+            var queryReservations = (from reservations in _context.Reservations
+                                     where reservations.StatusReservation == 1 && ((DateTime)reservations.DateEvent).Year >= currentDate.Year && ((DateTime)reservations.DateEvent).Year < currentDate.Year+5
+                                     select reservations).ToList();
+
+            var results = queryReservations.GroupBy(n => ((DateTime)n.DateEvent).Year)
+                            .Select(g => new { Year = g.Key, Count = g.Count() }).ToList();
+
+
+            Dictionary<int, int> values = new Dictionary<int, int>();
+            for (int i = currentDate.Year; i < currentDate.Year+5; i++)
+            {
+                int k = 0;
+                foreach (var item in results)
+                {
+                    if (item.Year.Equals(i))
+                    {
+                        values.Add(item.Year, item.Count);
+                        k = 1;
+                    }
+                }
+                if (k == 0)
+                {
+                    values.Add(i, 0);
+                }
+            }
+            ReservationByMonth reservationByMonth = new ReservationByMonth();
+            reservationByMonth.Values = values;
+
+            return Ok(reservationByMonth);
+
+
+        }
     }
+
+
 }
