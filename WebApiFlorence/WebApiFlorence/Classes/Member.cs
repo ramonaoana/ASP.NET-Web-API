@@ -17,8 +17,7 @@ namespace WebApiFlorence.Classes
         public string Email { get; set; }
         public string Instagram { get; set; }
         public string Facebook { get; set; }
-
-
+        public byte[] MemberPictureData { get; set; }
 
     }
 }

@@ -12,8 +12,8 @@ using WebApiFlorence.Data;
 namespace WebApiFlorence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220705044444_FirstCreate")]
-    partial class FirstCreate
+    [Migration("20220713121340_First_Create")]
+    partial class First_Create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -179,12 +179,7 @@ namespace WebApiFlorence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("MailRequestId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("MailRequest");
                 });
@@ -219,6 +214,10 @@ namespace WebApiFlorence.Migrations
 
                     b.Property<string>("MemberONRCCode")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("MemberPictureData")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<int>("MemberType")
                         .HasColumnType("int");
@@ -315,15 +314,11 @@ namespace WebApiFlorence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PhotoId"), 1L, 1);
 
-                    b.Property<int>("MemberId")
-                        .HasColumnType("int");
-
                     b.Property<byte[]>("PhotoPictureData")
+                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.HasKey("PhotoId");
-
-                    b.HasIndex("MemberId");
 
                     b.ToTable("Photos");
                 });
@@ -649,16 +644,6 @@ namespace WebApiFlorence.Migrations
                         .HasConstraintName("FK_FoodMenuDish_FoodMenu");
                 });
 
-            modelBuilder.Entity("WebApiFlorence.Classes.MailRequest", b =>
-                {
-                    b.HasOne("WebApiFlorence.User", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.ClientNoAction)
-                        .IsRequired()
-                        .HasConstraintName("FK_MailRequest_User");
-                });
-
             modelBuilder.Entity("WebApiFlorence.Classes.Menu", b =>
                 {
                     b.HasOne("WebApiFlorence.Classes.DrinksMenu", null)
@@ -674,16 +659,6 @@ namespace WebApiFlorence.Migrations
                         .OnDelete(DeleteBehavior.ClientNoAction)
                         .IsRequired()
                         .HasConstraintName("FK_Menu_FoodMenu");
-                });
-
-            modelBuilder.Entity("WebApiFlorence.Classes.Photo", b =>
-                {
-                    b.HasOne("WebApiFlorence.Classes.Member", null)
-                        .WithMany()
-                        .HasForeignKey("MemberId")
-                        .OnDelete(DeleteBehavior.ClientNoAction)
-                        .IsRequired()
-                        .HasConstraintName("FK_Photo_Member");
                 });
 
             modelBuilder.Entity("WebApiFlorence.Classes.ReservationPackage", b =>

@@ -80,6 +80,36 @@ namespace WebApiFlorence.Controllers
             return Ok(query);
         }
 
+        [HttpGet("getAllReservations")]
+        public IActionResult GetAllReservations()
+        {
+            var query = (from reservations in _context.Reservations
+                         join menu in _context.Menus on reservations.MenuId equals menu.MenuId
+                         join foodMenu in _context.FoodMenus on menu.FoodMenuId equals foodMenu.FoodMenuId
+                         join user in _context.Users on reservations.UserId equals user.UserId
+                         join document in _context.Documents on reservations.DocumentId equals document.DocumentId
+                         select new
+                         {
+                             reservationDateEvent = reservations.DateEvent,
+                             reservationDateReservation = reservations.ReservationDate,
+                             reservationTypeEvent = reservations.ReservationTypeEvent,
+                             reservationPeople = reservations.NrPeople,
+                             reservationStatus = reservations.StatusReservation,
+                             reservationAmount = reservations.ReservationAmount,
+                             reservationMenuName = foodMenu.FoodMenuName,
+                             reservationMenuAvans = 0.1 * reservations.ReservationAmount,
+                             reservationDiscount = reservations.DiscountId,
+                             reservationUserLastName = user.LastName,
+                             reservationUserFirstName = user.FirstName,
+                             reservationUserCnp = user.CNP,
+                             reservationUserEmail = user.Email,
+                             reservationUserPhone = user.Phone,
+                             reservationContract=document.ContentDocument
+
+                         }).ToList();
+            return Ok(query);
+        }
+
         [HttpGet("getFirstReservationByUser/{idUser}")]
         public IActionResult GetFirstReservationByUser(int idUser)
         {
@@ -238,7 +268,7 @@ namespace WebApiFlorence.Controllers
                             .Select(g => new { Year = g.Key, Count = g.Count() }).ToList();
 
 
-            Dictionary<int, int> values = new Dictionary<int, int>();
+            List<int> values = new List<int>();
             for (int i = currentDate.Year; i < currentDate.Year+5; i++)
             {
                 int k = 0;
@@ -246,19 +276,17 @@ namespace WebApiFlorence.Controllers
                 {
                     if (item.Year.Equals(i))
                     {
-                        values.Add(item.Year, item.Count);
+                        values.Add(item.Count);
                         k = 1;
                     }
                 }
                 if (k == 0)
                 {
-                    values.Add(i, 0);
+                    values.Add(0);
                 }
             }
-            ReservationByMonth reservationByMonth = new ReservationByMonth();
-            reservationByMonth.Values = values;
 
-            return Ok(reservationByMonth);
+            return Ok(values);
 
 
         }

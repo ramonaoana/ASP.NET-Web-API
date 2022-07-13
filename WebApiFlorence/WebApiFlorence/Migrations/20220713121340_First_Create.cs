@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebApiFlorence.Migrations
 {
-    public partial class FirstCreate : Migration
+    public partial class First_Create : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -83,6 +83,21 @@ namespace WebApiFlorence.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "MailRequest",
+                columns: table => new
+                {
+                    MailRequestId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ToEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Subject = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Body = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MailRequest", x => x.MailRequestId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Members",
                 columns: table => new
                 {
@@ -98,7 +113,8 @@ namespace WebApiFlorence.Migrations
                     County = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Instagram = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Facebook = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Facebook = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MemberPictureData = table.Column<byte[]>(type: "varbinary(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -135,6 +151,19 @@ namespace WebApiFlorence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Payments", x => x.PaymentId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Photos",
+                columns: table => new
+                {
+                    PhotoId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PhotoPictureData = table.Column<byte[]>(type: "varbinary(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Photos", x => x.PhotoId);
                 });
 
             migrationBuilder.CreateTable(
@@ -227,25 +256,6 @@ namespace WebApiFlorence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Photos",
-                columns: table => new
-                {
-                    PhotoId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    MemberId = table.Column<int>(type: "int", nullable: false),
-                    PhotoPictureData = table.Column<byte[]>(type: "varbinary(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Photos", x => x.PhotoId);
-                    table.ForeignKey(
-                        name: "FK_Photo_Member",
-                        column: x => x.MemberId,
-                        principalTable: "Members",
-                        principalColumn: "MemberId");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "DishProducts",
                 columns: table => new
                 {
@@ -287,27 +297,6 @@ namespace WebApiFlorence.Migrations
                         column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "ProductId");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "MailRequest",
-                columns: table => new
-                {
-                    MailRequestId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ToEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Subject = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Body = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_MailRequest", x => x.MailRequestId);
-                    table.ForeignKey(
-                        name: "FK_MailRequest_User",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "UserId");
                 });
 
             migrationBuilder.CreateTable(
@@ -440,11 +429,6 @@ namespace WebApiFlorence.Migrations
                 column: "DishId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MailRequest_UserId",
-                table: "MailRequest",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Menus_DrinksMenuId",
                 table: "Menus",
                 column: "DrinksMenuId");
@@ -453,11 +437,6 @@ namespace WebApiFlorence.Migrations
                 name: "IX_Menus_FoodMenuId",
                 table: "Menus",
                 column: "FoodMenuId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Photos_MemberId",
-                table: "Photos",
-                column: "MemberId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Requests_UserId",
@@ -515,6 +494,9 @@ namespace WebApiFlorence.Migrations
                 name: "MailRequest");
 
             migrationBuilder.DropTable(
+                name: "Members");
+
+            migrationBuilder.DropTable(
                 name: "Photos");
 
             migrationBuilder.DropTable(
@@ -531,9 +513,6 @@ namespace WebApiFlorence.Migrations
 
             migrationBuilder.DropTable(
                 name: "Dishes");
-
-            migrationBuilder.DropTable(
-                name: "Members");
 
             migrationBuilder.DropTable(
                 name: "Packages");

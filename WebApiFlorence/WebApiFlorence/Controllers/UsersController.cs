@@ -133,5 +133,19 @@ namespace WebApiFlorence.Controllers
         {
             return _context.Users.Any(e => e.UserId == id);
         }
+
+        [HttpGet("giveRights/{id}")]
+        public IActionResult GiveRights(int id)
+        {
+            var queryUser = (from user in _context.Users
+                             where user.UserId == id
+                             select user).FirstOrDefault();
+            if (queryUser != null)
+            {
+                queryUser.Rights = true;
+                _context.SaveChanges();
+            }
+            return Ok(queryUser);
+        }
     }
 }

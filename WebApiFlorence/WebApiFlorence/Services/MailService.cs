@@ -46,5 +46,33 @@ namespace WebApiFlorence.Services
 
             }
         }
+        public async Task SendMailToUser(MailMessage message)
+        {
+            System.Net.Mail.SmtpClient smtpClient = new System.Net.Mail.SmtpClient();
+            MailMessage mess = message;
+
+            MailAddress fromAddress = new MailAddress("restaurant.florence2022@gmail.com", "Restaurant Florence");
+            smtpClient.Host = "smtp-relay.sendinblue.com"; 
+            smtpClient.Port = 587;
+
+            NetworkCredential info = new NetworkCredential("restaurant.florence2022@gmail.com", "mZd3NPg0D2AEOwav");
+            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtpClient.UseDefaultCredentials = false;
+            smtpClient.Credentials = info;
+
+            message.From = fromAddress;
+
+            message.IsBodyHtml = false;
+            try
+            {
+                smtpClient.Send(message);
+            }
+            catch (Exception ex)
+            {
+               
+            }
+
+        }
+
     }
 }

@@ -29,15 +29,6 @@ namespace WebApiFlorence.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         { 
 
-            // MAIL 
-
-            modelBuilder.Entity<MailRequest>()
-                .HasOne<User>()
-                .WithMany()
-                .HasForeignKey(p => p.UserId)
-                .OnDelete(DeleteBehavior.ClientNoAction)
-                .HasConstraintName("FK_MailRequest_User");
-
             //Reservation
 
             modelBuilder.Entity<Reservation>()
@@ -195,14 +186,6 @@ namespace WebApiFlorence.Data
                 .HasForeignKey(rd => rd.PackageId)
                 .OnDelete(DeleteBehavior.ClientNoAction)
                 .HasConstraintName("FK_ReservationPackage_Package");
-
-
-            modelBuilder.Entity<Photo>()
-                .HasOne<Member>()
-                .WithMany()
-                .HasForeignKey(rd => rd.MemberId)
-                .OnDelete(DeleteBehavior.ClientNoAction)
-                .HasConstraintName("FK_Photo_Member");
 
         }
     }

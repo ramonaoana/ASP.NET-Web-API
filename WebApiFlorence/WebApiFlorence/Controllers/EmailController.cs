@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Mail;
 using WebApiFlorence.Classes;
 using WebApiFlorence.Data;
 using WebApiFlorence.Services;
@@ -37,6 +38,18 @@ namespace WebApiFlorence.Controllers
 
                 throw ex;
             }
+
+        }
+
+        [HttpGet("sendMailToOneUser")]
+        public async Task<IActionResult> SendMailTo()
+        {
+            MailMessage message = new MailMessage();
+            message.Subject = "Notificare";
+            message.Body = "Not";
+            message.To.Add("ramonaoana29@gmail.com");
+            mailService.SendMailToUser(message);
+            return Ok();
 
         }
     }
