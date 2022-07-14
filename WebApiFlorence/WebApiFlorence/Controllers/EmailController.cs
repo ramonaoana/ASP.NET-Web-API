@@ -21,6 +21,19 @@ namespace WebApiFlorence.Controllers
 
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<MailRequest>> GetMail(int id)
+        {
+            var mail = await _context.MailRequest.FindAsync(id);
+
+            if (mail == null)
+            {
+                return NotFound();
+            }
+
+            return mail;
+        }
+
         [HttpPost("Send")]
         public async Task<IActionResult> Send(MailRequest mailRequest)
         {
@@ -41,15 +54,22 @@ namespace WebApiFlorence.Controllers
 
         }
 
-        [HttpGet("sendMailToOneUser")]
-        public async Task<IActionResult> SendMailTo()
+        [HttpPost("sendMail")]
+        public async Task<IActionResult> SendMailTo(MailRequest mail)
         {
             MailMessage message = new MailMessage();
-            message.Subject = "Notificare";
-            message.Body = "Not";
-            message.To.Add("ramonaoana29@gmail.com");
+            message.Subject = mail.Subject;
+            message.Body =mail.Body;
+            string[] addresses = mail.ToEmail.Split(',');
+            foreach(var item in addresses)
+            {
+                message.To.Add(item);
+            }
             mailService.SendMailToUser(message);
-            return Ok();
+            _context.MailRequest.Add(mail);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetMail", new { id = mail.MailRequestId }, mail);
 
         }
     }

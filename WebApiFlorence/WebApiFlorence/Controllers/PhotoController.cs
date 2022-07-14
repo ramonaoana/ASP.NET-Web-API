@@ -38,6 +38,19 @@ namespace WebApiFlorence.Controllers
             return CreatedAtAction("GetPhoto", new { id = photo.PhotoId }, photo);
         }
 
+        [HttpPost("postPhotos")]
+        public async Task<ActionResult<Photo>> PostPhotos(List<Photo> photos)
+        {
+
+            foreach (var item in photos)
+            {
+                _context.Photos.Add(item);
+            }
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePhoto(int id)
         {

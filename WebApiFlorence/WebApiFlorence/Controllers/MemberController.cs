@@ -43,6 +43,20 @@ namespace WebApiFlorence.Controllers
             return member;
         }
 
+        // GET
+        [HttpGet("getByType")]
+        public async Task<ActionResult<Member>> GetMemberByType(int type)
+        {
+            var member = await _context.Members.FirstOrDefaultAsync(x => x.MemberType == type);
+
+            if (member == null)
+            {
+                return NotFound();
+            }
+
+            return member;
+        }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMember(int id, Member member)
         {
