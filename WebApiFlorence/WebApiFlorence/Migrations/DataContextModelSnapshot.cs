@@ -165,6 +165,12 @@ namespace WebApiFlorence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MailRequestId"), 1L, 1);
 
+                    b.Property<byte[]>("Attachment")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("AttachmentName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Body")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -180,64 +186,6 @@ namespace WebApiFlorence.Migrations
                     b.HasKey("MailRequestId");
 
                     b.ToTable("MailRequest");
-                });
-
-            modelBuilder.Entity("WebApiFlorence.Classes.Member", b =>
-                {
-                    b.Property<int>("MemberId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MemberId"), 1L, 1);
-
-                    b.Property<string>("Addresse")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("County")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Facebook")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Instagram")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MemberONRCCode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("MemberPictureData")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<int>("MemberType")
-                        .HasColumnType("int");
-
-                    b.Property<string>("MemberUniqueCode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NumberPhone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OwnerName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Town")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("MemberId");
-
-                    b.ToTable("Members");
                 });
 
             modelBuilder.Entity("WebApiFlorence.Classes.Menu", b =>
@@ -316,7 +264,12 @@ namespace WebApiFlorence.Migrations
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
 
+                    b.Property<int>("RestaurantId")
+                        .HasColumnType("int");
+
                     b.HasKey("PhotoId");
+
+                    b.HasIndex("RestaurantId");
 
                     b.ToTable("Photos");
                 });
@@ -357,6 +310,68 @@ namespace WebApiFlorence.Migrations
                     b.HasIndex("PackageId");
 
                     b.ToTable("ReservationPackages", (string)null);
+                });
+
+            modelBuilder.Entity("WebApiFlorence.Classes.Restaurant", b =>
+                {
+                    b.Property<int>("RestaurantId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RestaurantId"), 1L, 1);
+
+                    b.Property<string>("Addresse")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("County")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Facebook")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Instagram")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumberPhone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OwnerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestaurantName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestaurantONRCCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("RestaurantPictureData")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<int>("RestaurantType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RestaurantUniqueCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Town")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("RestaurantId");
+
+                    b.ToTable("Restaurants");
                 });
 
             modelBuilder.Entity("WebApiFlorence.Classes.Review", b =>
@@ -657,6 +672,16 @@ namespace WebApiFlorence.Migrations
                         .OnDelete(DeleteBehavior.ClientNoAction)
                         .IsRequired()
                         .HasConstraintName("FK_Menu_FoodMenu");
+                });
+
+            modelBuilder.Entity("WebApiFlorence.Classes.Photo", b =>
+                {
+                    b.HasOne("WebApiFlorence.Classes.Restaurant", null)
+                        .WithMany()
+                        .HasForeignKey("RestaurantId")
+                        .OnDelete(DeleteBehavior.ClientNoAction)
+                        .IsRequired()
+                        .HasConstraintName("FK_Photo_Restaurant");
                 });
 
             modelBuilder.Entity("WebApiFlorence.Classes.ReservationPackage", b =>

@@ -90,35 +90,13 @@ namespace WebApiFlorence.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ToEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Subject = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Body = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Body = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Attachment = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    AttachmentName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_MailRequest", x => x.MailRequestId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Members",
-                columns: table => new
-                {
-                    MemberId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    OwnerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MemberType = table.Column<int>(type: "int", nullable: false),
-                    MemberONRCCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MemberUniqueCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NumberPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Addresse = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Town = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    County = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Instagram = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Facebook = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MemberPictureData = table.Column<byte[]>(type: "varbinary(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Members", x => x.MemberId);
                 });
 
             migrationBuilder.CreateTable(
@@ -154,19 +132,6 @@ namespace WebApiFlorence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Photos",
-                columns: table => new
-                {
-                    PhotoId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PhotoPictureData = table.Column<byte[]>(type: "varbinary(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Photos", x => x.PhotoId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
@@ -179,6 +144,31 @@ namespace WebApiFlorence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.ProductId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Restaurants",
+                columns: table => new
+                {
+                    RestaurantId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RestaurantName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RestaurantType = table.Column<int>(type: "int", nullable: false),
+                    OwnerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RestaurantONRCCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RestaurantUniqueCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NumberPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Addresse = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Town = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    County = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Instagram = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Facebook = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RestaurantPictureData = table.Column<byte[]>(type: "varbinary(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Restaurants", x => x.RestaurantId);
                 });
 
             migrationBuilder.CreateTable(
@@ -297,6 +287,25 @@ namespace WebApiFlorence.Migrations
                         column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "ProductId");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Photos",
+                columns: table => new
+                {
+                    PhotoId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PhotoPictureData = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    RestaurantId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Photos", x => x.PhotoId);
+                    table.ForeignKey(
+                        name: "FK_Photo_Restaurant",
+                        column: x => x.RestaurantId,
+                        principalTable: "Restaurants",
+                        principalColumn: "RestaurantId");
                 });
 
             migrationBuilder.CreateTable(
@@ -439,6 +448,11 @@ namespace WebApiFlorence.Migrations
                 column: "FoodMenuId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Photos_RestaurantId",
+                table: "Photos",
+                column: "RestaurantId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Requests_UserId",
                 table: "Requests",
                 column: "UserId");
@@ -494,9 +508,6 @@ namespace WebApiFlorence.Migrations
                 name: "MailRequest");
 
             migrationBuilder.DropTable(
-                name: "Members");
-
-            migrationBuilder.DropTable(
                 name: "Photos");
 
             migrationBuilder.DropTable(
@@ -513,6 +524,9 @@ namespace WebApiFlorence.Migrations
 
             migrationBuilder.DropTable(
                 name: "Dishes");
+
+            migrationBuilder.DropTable(
+                name: "Restaurants");
 
             migrationBuilder.DropTable(
                 name: "Packages");

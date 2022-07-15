@@ -25,7 +25,11 @@ namespace WebApiFlorence.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Photo>>> GetPhotos()
         {
-            return await _context.Photos.ToListAsync();
+            var queryPhotos = (from photos in _context.Photos
+                               join restaurant in _context.Restaurants on photos.RestaurantId equals restaurant.RestaurantId
+                               where restaurant.RestaurantType == 1
+                               select photos).ToList();
+            return Ok(queryPhotos);
         }
 
 

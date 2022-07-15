@@ -14,7 +14,7 @@ namespace WebApiFlorence.Data
         public DbSet<DrinksMenu> DrinksMenus { get; set; }
         public DbSet<Discount> Discounts { get; set; }
         public DbSet<Photo> Photos { get; set; }
-        public DbSet<Member> Members { get; set; }
+        public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Package> Packages { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<MailRequest> MailRequest { get; set; }
@@ -27,7 +27,15 @@ namespace WebApiFlorence.Data
         public DbSet<FoodMenu> FoodMenus { get; set; }
         public DbSet<FoodMenuDish> FoodMenuDishes { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        { 
+        {
+            //Photo
+
+            modelBuilder.Entity<Photo>()
+             .HasOne<Restaurant>()
+             .WithMany()
+             .HasForeignKey(p => p.RestaurantId)
+             .OnDelete(DeleteBehavior.ClientNoAction)
+             .HasConstraintName("FK_Photo_Restaurant");
 
             //Reservation
 

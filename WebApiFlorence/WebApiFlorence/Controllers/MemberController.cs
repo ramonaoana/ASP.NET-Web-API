@@ -24,16 +24,16 @@ namespace WebApiFlorence.Controllers
 
         // GET
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Member>>> GetMembers()
+        public async Task<ActionResult<IEnumerable<Restaurant>>> GetMembers()
         {
-            return await _context.Members.ToListAsync();
+            return await _context.Restaurants.ToListAsync();
         }
 
         // GET
         [HttpGet("{id}")]
-        public async Task<ActionResult<Member>> GetMember(int id)
+        public async Task<ActionResult<Restaurant>> GetMember(int id)
         {
-            var member = await _context.Members.FindAsync(id);
+            var member = await _context.Restaurants.FindAsync(id);
 
             if (member == null)
             {
@@ -45,9 +45,9 @@ namespace WebApiFlorence.Controllers
 
         // GET
         [HttpGet("getByType")]
-        public async Task<ActionResult<Member>> GetMemberByType(int type)
+        public async Task<ActionResult<Restaurant>> GetMemberByType(int type)
         {
-            var member = await _context.Members.FirstOrDefaultAsync(x => x.MemberType == type);
+            var member = await _context.Restaurants.FirstOrDefaultAsync(x => x.RestaurantType == type);
 
             if (member == null)
             {
@@ -58,9 +58,9 @@ namespace WebApiFlorence.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutMember(int id, Member member)
+        public async Task<IActionResult> PutMember(int id, Restaurant member)
         {
-            if (id != member.MemberId)
+            if (id != member.RestaurantId)
             {
                 return BadRequest();
             }
@@ -86,24 +86,24 @@ namespace WebApiFlorence.Controllers
             return NoContent();
         }
         [HttpPost]
-        public async Task<ActionResult<Member>> PostMember(Member member)
+        public async Task<ActionResult<Restaurant>> PostMember(Restaurant member)
         {
-            _context.Members.Add(member);
+            _context.Restaurants.Add(member);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetMember", new { id = member.MemberId }, member);
+            return CreatedAtAction("GetMember", new { id = member.RestaurantId }, member);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMember(int id)
         {
-            var member = await _context.Members.FindAsync(id);
+            var member = await _context.Restaurants.FindAsync(id);
             if (member == null)
             {
                 return NotFound();
             }
 
-            _context.Members.Remove(member);
+            _context.Restaurants.Remove(member);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -111,7 +111,7 @@ namespace WebApiFlorence.Controllers
 
         private bool MemberExists(int id)
         {
-            return _context.Members.Any(e => e.MemberId == id);
+            return _context.Restaurants.Any(e => e.RestaurantId == id);
         }
     }
 }

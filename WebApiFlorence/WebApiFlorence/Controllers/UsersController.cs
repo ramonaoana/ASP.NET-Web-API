@@ -29,6 +29,19 @@ namespace WebApiFlorence.Controllers
             return await _context.Users.ToListAsync();
         }
 
+        // GET: api/Users
+        [HttpGet("getUsersWithoutAdmin/{adminId}")]
+        public async Task<ActionResult> GetUsersWithoutAdmin(int adminId)
+        {
+            var query = (from users in _context.Users
+                         where _context.Users.Any(c => c.UserId != adminId)
+                         select users
+                         ).ToList();
+
+
+            return Ok(query);
+        }
+
         // GET: api/Users/5
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)

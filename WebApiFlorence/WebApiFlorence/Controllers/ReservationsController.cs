@@ -111,7 +111,7 @@ namespace WebApiFlorence.Controllers
         }
 
         [HttpGet("getFirstReservationByUser/{idUser}")]
-        public IActionResult GetFirstReservationByUser(int idUser)
+        public String GetFirstReservationByUser(int idUser)
         {
             DateTime currentDate = DateTime.Now;
             var query = (from reservations in _context.Reservations
@@ -119,10 +119,16 @@ namespace WebApiFlorence.Controllers
                          orderby reservations.DateEvent ascending
                          select reservations).FirstOrDefault();
 
-            TimeSpan nrDays = (TimeSpan)(query.DateEvent - DateTime.Now);
-            Double nr = nrDays.Days;
-            return Ok(nr);
+            String response = "";
+            if (query != null)
+            {
+                TimeSpan nrDays = (TimeSpan)(query.DateEvent - DateTime.Now);
+                Double nr = nrDays.Days;
+                response = "" + nr;
+            }
+            else response = "Not found";
 
+            return response;
         }
 
 

@@ -2,14 +2,15 @@
 
 namespace WebApiFlorence.Classes
 {
-    public class Member
+    public class Restaurant
     {
         [Key]
-        public int MemberId { get; set; }
+        public int RestaurantId { get; set; }
+        public string RestaurantName { get; set; }
+        public int RestaurantType{ get; set; }
         public string OwnerName { get; set; }
-        public int MemberType { get; set; }
-        public string? MemberONRCCode { get; set; }
-        public string? MemberUniqueCode { get; set; }
+        public string? RestaurantONRCCode { get; set; }
+        public string? RestaurantUniqueCode { get; set; }
         public string NumberPhone { get; set; }
         public string Addresse { get; set; }
         public string Town { get; set; }
@@ -17,7 +18,7 @@ namespace WebApiFlorence.Classes
         public string Email { get; set; }
         public string Instagram { get; set; }
         public string Facebook { get; set; }
-        public byte[] MemberPictureData { get; set; }
+        public byte[] RestaurantPictureData { get; set; }
 
     }
 }
