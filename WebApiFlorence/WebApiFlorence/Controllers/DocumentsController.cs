@@ -447,6 +447,14 @@ namespace WebApiFlorence.Controllers
             return document.ContentDocument;
         }
 
+        [HttpGet("getInvitation")]
+        public async Task<byte[]> CreateInvitation()
+        {
+            Invitation invitation = new Invitation();
+            byte[] array =await _generatedPdf.GetByteArray("Views/InvitationTemplate.cshtml", invitation);
+            return array;
+        }
+
 
 
         // DELETE: api/Documents/5

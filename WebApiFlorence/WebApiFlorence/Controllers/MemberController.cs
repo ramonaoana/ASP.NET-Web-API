@@ -44,7 +44,7 @@ namespace WebApiFlorence.Controllers
         }
 
         // GET
-        [HttpGet("getByType")]
+        [HttpGet("getByType/{type}")]
         public async Task<ActionResult<Restaurant>> GetMemberByType(int type)
         {
             var member = await _context.Restaurants.FirstOrDefaultAsync(x => x.RestaurantType == type);

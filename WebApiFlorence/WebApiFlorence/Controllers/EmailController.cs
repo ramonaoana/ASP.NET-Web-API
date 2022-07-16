@@ -108,36 +108,50 @@ namespace WebApiFlorence.Controllers
         }
 
 
-        [HttpPost("sendContractOnMail")]
-        public async Task<IActionResult> SendContractOnMail(String mailTo,int reservationId)
+        [HttpPost("sendContractOnMail/{reservationId}")]
+        public async Task<IActionResult> SendContractOnMail(int reservationId)
         {
             MailMessage message = new MailMessage();
             MailRequest mail = new MailRequest();
             message.Subject = "Confirmare Rezervare";
             message.Body = "Va multumim pentru rezervarea efectuata! Curand veti fi contactat de administratorul restaurantului pentru a stabili ultimele detalii.";
-            message.To.Add(mailTo);
-
-            //var queryRes=from reservation in _context.Reservations
-            //             where reservation.ReservationId== reservationId
 
 
-            byte[] bytes = Encoding.ASCII.GetBytes("FLORENCE");
+            var queryUser = (from reservation in _context.Reservations
+                            join users in _context.Users on reservation.UserId equals users.UserId
+                            where reservation.ReservationId == reservationId
+                            select users.Email).FirstOrDefault();
+
+            message.To.Add(queryUser);
+
+            var queryDoc = (from reservation in _context.Reservations
+                            join documents in _context.Documents on reservation.DocumentId equals documents.DocumentId
+                            where reservation.ReservationId == reservationId
+                            select documents.ContentDocument).FirstOrDefault();
+
+
+            //byte[] bytes = Encoding.ASCII.GetBytes("FLORENCE");
             string date = DateTime.Now.ToString("dd_MM_yyyy");
             String name = "ContractFlorence_" + date+".pdf";
             mail.AttachmentName = name;
-            mail.Attachment = bytes;
+            mail.Attachment = queryDoc;
             mail.Subject = message.Subject;
             mail.Body = message.Body;
-            mail.ToEmail = mailTo;
-            Attachment att = new Attachment("buna", name);
+            mail.ToEmail = queryUser;
+            //Attachment att = new Attachment(new MemoryStream(queryDoc), name);
 
-            message.Attachments.Add(att);
+            message.BodyEncoding = Encoding.UTF8;
+            System.IO.MemoryStream ms = new System.IO.MemoryStream(queryDoc);
+
+            // Create the attachment from a stream. Be sure to name the data with a file and
+            message.Attachments.Add(new Attachment(ms, name, "application/pdf"));
+
             mailService.SendMailToUser(message);
-            //_context.MailRequest.Add(mail);
-            //await _context.SaveChangesAsync();
 
-            //return CreatedAtAction("GetMail", new { id = mail.MailRequestId }, mail);
-            return Ok();
+            _context.MailRequest.Add(mail);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetMail", new { id = mail.MailRequestId }, mail);
         }
 
     }

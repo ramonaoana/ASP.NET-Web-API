@@ -60,6 +60,7 @@ app.UseHttpsRedirection();
 app.UseCors(myAllowSpecificOrigins);
 
 app.UseAuthorization();
+app.UseStaticFiles();
 
 app.MapControllers();
 
