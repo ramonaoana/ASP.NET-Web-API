@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "ceTe.DynamicPDF.CoreSuite.NET/11.33.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "4.7.0"
+        },
+        "compile": {
+          "lib/net5.0/DynamicPDF.CoreSuite.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/DynamicPDF.CoreSuite.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -3875,6 +3887,27 @@
     }
   },
   "libraries": {
+    "ceTe.DynamicPDF.CoreSuite.NET/11.33.0": {
+      "sha512": "0GpvTM2E32JQ6QiYEr/a3ELVWAaOuHT986RHQYNVUPmAkjOuXr/C8VBDK1rh3AJCQVlV6USP8rWOQtpIcW1/1Q==",
+      "type": "package",
+      "path": "cete.dynamicpdf.coresuite.net/11.33.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EULA",
+        "cete.dynamicpdf.coresuite.net.11.33.0.nupkg.sha512",
+        "cete.dynamicpdf.coresuite.net.nuspec",
+        "legal.txt",
+        "lib/net20/DynamicPDF.CoreSuite.dll",
+        "lib/net20/DynamicPDF.CoreSuite.xml",
+        "lib/net40/DynamicPDF.CoreSuite.dll",
+        "lib/net40/DynamicPDF.CoreSuite.xml",
+        "lib/net5.0/DynamicPDF.CoreSuite.dll",
+        "lib/net5.0/DynamicPDF.CoreSuite.xml",
+        "lib/netstandard20/DynamicPDF.CoreSuite.dll",
+        "lib/netstandard20/DynamicPDF.CoreSuite.xml"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -11391,7 +11424,8 @@
       "NETCore.MailKit >= 2.1.0",
       "SendGrid >= 9.28.0",
       "Swashbuckle.AspNetCore >= 6.3.1",
-      "Wkhtmltopdf.NetCore >= 3.0.2"
+      "Wkhtmltopdf.NetCore >= 3.0.2",
+      "ceTe.DynamicPDF.CoreSuite.NET >= 11.33.0"
     ]
   },
   "packageFolders": {
@@ -11482,6 +11516,10 @@
           "Wkhtmltopdf.NetCore": {
             "target": "Package",
             "version": "[3.0.2, )"
+          },
+          "ceTe.DynamicPDF.CoreSuite.NET": {
+            "target": "Package",
+            "version": "[11.33.0, )"
           }
         },
         "imports": [

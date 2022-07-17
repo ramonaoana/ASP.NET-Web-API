@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "GIAg/1cioL6czAPDBOe9qi0bRB/sX4XEYTVyaQDgX4x8d78kkhmgVTtIBhTCL+ZFRM0w6qtAOsMUzKsYz7sBEw==",
+  "dgSpecHash": "r0226jglHLHXTHmi7SdqgQv3A9W6sh8wgHhjmycLZ7UO5XrcX87UXpsjpRNgkjK7u3qPmAiUc99lpjcrzqw3gQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\aramo\\Desktop\\ASP.NET WEB API\\WebApiFlorence\\WebApiFlorence\\WebApiFlorence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\aramo\\.nuget\\packages\\cete.dynamicpdf.coresuite.net\\11.33.0\\cete.dynamicpdf.coresuite.net.11.33.0.nupkg.sha512",
     "C:\\Users\\aramo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\aramo\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",
     "C:\\Users\\aramo\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

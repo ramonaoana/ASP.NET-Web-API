@@ -46,6 +46,7 @@
           "SendGrid": "9.28.0",
           "Swashbuckle.AspNetCore": "6.3.1",
           "Wkhtmltopdf.NetCore": "3.0.2",
+          "ceTe.DynamicPDF.CoreSuite.NET": "11.33.0",
           "Microsoft.AspNetCore.Antiforgery": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies.Reference": "6.0.0.0",
@@ -340,6 +341,20 @@
         },
         "compile": {
           "WebApiFlorence.dll": {}
+        }
+      },
+      "ceTe.DynamicPDF.CoreSuite.NET/11.33.0": {
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "6.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/DynamicPDF.CoreSuite.dll": {
+            "assemblyVersion": "11.33.0.46690",
+            "fileVersion": "11.33.0.46690"
+          }
+        },
+        "compile": {
+          "lib/net5.0/DynamicPDF.CoreSuite.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -4979,6 +4994,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ceTe.DynamicPDF.CoreSuite.NET/11.33.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0GpvTM2E32JQ6QiYEr/a3ELVWAaOuHT986RHQYNVUPmAkjOuXr/C8VBDK1rh3AJCQVlV6USP8rWOQtpIcW1/1Q==",
+      "path": "cete.dynamicpdf.coresuite.net/11.33.0",
+      "hashPath": "cete.dynamicpdf.coresuite.net.11.33.0.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

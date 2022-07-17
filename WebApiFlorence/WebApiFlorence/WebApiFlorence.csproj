@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ceTe.DynamicPDF.CoreSuite.NET" Version="11.33.0" />
     <PackageReference Include="MailKit" Version="3.2.0" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.2.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />

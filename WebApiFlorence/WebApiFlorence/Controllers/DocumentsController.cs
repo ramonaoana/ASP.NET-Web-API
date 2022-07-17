@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ceTe.DynamicPDF;
+using ceTe.DynamicPDF.PageElements;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -447,13 +449,6 @@ namespace WebApiFlorence.Controllers
             return document.ContentDocument;
         }
 
-        [HttpGet("getInvitation")]
-        public async Task<byte[]> CreateInvitation()
-        {
-            Invitation invitation = new Invitation();
-            byte[] array =await _generatedPdf.GetByteArray("Views/InvitationTemplate.cshtml", invitation);
-            return array;
-        }
 
 
 

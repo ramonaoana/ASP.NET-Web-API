@@ -55,6 +55,17 @@ namespace WebApiFlorence.Controllers
             return Ok(result);
         }
 
+        [HttpGet("getMenusNames")]
+        public IActionResult GetMenusNames()
+        {
+            var result = (from menu in _context.Menus
+                          select new
+                          {
+                              menuName = menu.MenuName
+                          }).ToList();
+            return Ok(result);
+        }
+
 
         [HttpGet("getMenuPrice/{name}")]
         public IActionResult GetMenuPrice(String name)
