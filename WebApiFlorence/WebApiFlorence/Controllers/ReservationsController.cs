@@ -258,6 +258,40 @@ namespace WebApiFlorence.Controllers
             }
 
             return Ok(values);
+        }
+
+        [HttpGet("getReservationsFromLastYear")]
+        public IActionResult GetReservationFromLastYear()
+        {
+            DateTime currentDate = DateTime.Now;
+            var queryReservationsLastYear = (from reservations in _context.Reservations
+                                     where reservations.StatusReservation == 1 && ((DateTime)reservations.DateEvent).Year == currentDate.Year-1
+                                     select reservations).ToList();
+
+
+            var resultsLastYear = queryReservationsLastYear.GroupBy(n => ((DateTime)n.DateEvent).Month)
+                            .Select(g => new { Month = g.Key, Count = g.Count() }).ToList();
+
+            List<int> valuesLastYear = new List<int>();
+            for (int i = 1; i < 13; i++)
+            {
+                int k = 0;
+                foreach (var item in resultsLastYear)
+                {
+                    if (item.Month.Equals(i))
+                    {
+                        valuesLastYear.Add(item.Count);
+                        k = 1;
+                    }
+                }
+                if (k == 0)
+                {
+                    valuesLastYear.Add(0);
+                }
+            }
+         
+
+            return Ok(valuesLastYear);
 
 
         }
